@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hollys</title>
+  <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+  <style>
+    *{
+      margin:0;padding:0;
+     }
+    #header{
+      width:100%;
+      height:24px;
+      background-color:#b5121b;
+      padding:10px;      
+    }
+    #btn-join{
+      width:80px;
+      height:21.5px;
+      padding-top:2.5px;
+      background-color:#ccaa88;
+      border-radius:12px;
+      font-family:'Noto Sans KR';
+      font-weight:400;
+      font-size:12px;
+      color:#ffffff;
+      text-align:center;
+      display:inline-block;
+    }
+    #main-tit{
+      width:87px;
+      display:inline-block;
+      margin-left:47px;
+    }
+    #btn-nav{
+      width:22px;      
+      display:inline-block;
+      margin-left:100px;
+    }
+    #sliders p{
+      font-family:'Noto Sans KR';
+      font-weight:500;
+      font-size:14px;
+      color:#ffffff;
+      /* color:#000000; */
+    }
+    .slider{
+      position:absolute;
+      left:0;
+      top:44px;
+      display:none;
+    }
+    #slider03{
+      display:block;
+    }
+    #slider01 p:first-of-type{
+      position:absolute;
+      left:55px;
+      top:330px;
+    }    
+    #slider01 p:last-of-type{
+      position:absolute;
+      left:185px;
+      top:372px;
+    }    
+    #points{
+      position:absolute;
+      left:121px;
+      top:449px;     
+    }
+    .dot{
+      width:12px;
+      height:12px;
+      margin-right:4px;
+      margin-left:4px;
+      border-radius:6px;
+      background-color:#dbdbdb;
+      display:inline-block;
+    }
+    #first-dot{
+      background-color:#b5121b;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div id="btn-join">
+      가맹문의
+    </div>
+    <div id="main-tit">
+      <img src="./images/main-tit.svg" alt="hollys">
+    </div>
+    <div id="btn-nav">
+      <img src="./images/btn-nav.svg" alt="메뉴">
+    </div>
+  </div>
+  <div id="contents">
+    <div id="sliders">
+      <div id="slider01" class="slider">
+        <img src="./images/slider01.jpg" alt="STRAWBERRYLOVESCHOCO">
+        <P>딸기 초코 쏘스윗박스</P>
+        <P>딸기 초코케익 할라치노</P>
+      </div>
+      <div id="slider02" class="slider">
+        <img src="./images/slider02.jpg" alt="HAPPYBERRYMOMENTS">
+        <P>딸기 바나나<br>스무디</P>
+        <P>딸기 듬뿍 라떼</P>
+      </div>
+      <div id="slider03" class="slider">
+        <img src="./images/slider03.jpg" alt="PULLOFPINKCREAM">
+        <P>딸기 요거트<br>꽃카롱</P>
+        <P>딸기 초코 가토</P>
+      </div>
+      <div id="slider04" class="slider">
+        <img src="./images/slider04.jpg" alt="STRAWBERRYCHEESESMILE">
+        <P>딸기 치즈케익 할라치노</P>
+      </div>
+      <div id="slider05" class="slider">
+        <img src="./images/slider05.jpg" alt="WHATAWONDERFULTIME">
+        <P>샤이닝 윈터 케이크 39,000</P>
+      </div>
+      <div id="points">
+          <div class="dot" id="first-dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+      </div>
+    </div>
+    <div id="icons">아이콘</div>
+    <div id="banner">배너</div>
+    <div id="notice">게시판</div>
+  </div>
+  <div id="footer">푸터</div>
+</body>
+</html>

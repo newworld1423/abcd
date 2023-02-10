@@ -1,0 +1,18 @@
+Main-color : #b5121b
+
+header : 100% * 44, main-color
+btn-join : 80 * 24, #ccaa88, noto_sans_kr, regular,12,#ffffff
+
+slider : noto_sans_kr, med,14,#ffffff
+slider-point : 12*12, maincolor, #dbdbdb
+
+icons : Roboto, Light,11,#333333
+
+banner : Noto Sans KR, Bold, 16, #ffffff  / Light, 12 / #333333
+
+notice : roboto, bold, 14, #333333 / medium, 11, #b5121b / Noto Sans KR, Regular, 12, #666666
+
+footer : back - #eeeeee
+aff-aca : Noto Sans KR, med, 14, #333333
+footer-nav: Noto Sans KR, bold, 13, #666666 / regular
+address :  Noto Sans KR, med, 11, #666666 / regular
