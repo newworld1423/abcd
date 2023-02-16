@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+        /* 모바일 스타일 */
+        .wrap{
+            width:360px;
+            margin:0 auto;
+            padding:36px 12px;
+        }
+        .txt-bx{
+            float:left;
+            width:100%;
+            height:208px;
+            margin-bottom:12px;
+            text-align:center;
+            line-height:208px;
+            border:2px solid red;
+        }
+        .bx-grn{
+            border-color:green;
+        }
+        .bx-blu{
+            border-color:blue;
+        }
+        /* 태블릿 브레이크 포인트 760px이상*/
+        @media (min-width:768px){
+            .wrap{
+            width:768px;
+            padding:36px 24px;
+            }
+            .txt-bx{
+            width:354px;
+            height:219px;
+            line-height:219px;
+            }
+            .bx-red{
+                margin-right:12px;
+            }
+            .bx-blu{
+                width:100%;
+            }
+        }
+        /* 데스크탑 브레이크 포인트 1280px이상 */
+        @media (min-width:1280px){
+            .wrap{
+            width:1248px;
+            }
+            .txt-bx{
+            width:392px;
+            height:240px;
+            line-height:240px;
+            }
+            .bx-grn{
+                margin-right:12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="txt-bx bx-red">빨강</div>
+        <div class="txt-bx bx-grn">초록</div>
+        <div class="txt-bx bx-blu">파랑</div>
+    </div>
+</body>
+</html>

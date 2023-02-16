@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+        /* 기본스타일 / 모바일우선 */
+        .wrap{
+            width:360px;
+            margin:0 auto;
+        }
+        .txt-bx{
+            float:left;
+            width:100%;
+            height:200px;
+            margin-bottom:12px;
+            background-color:red;
+        }
+        /* 768 브레이크 포인트 */
+        @media (min-width:768px){
+            .wrap{
+                width:768px;
+            }
+            .txt-bx{
+                width:378px;
+            }
+            .bx-red{
+                margin-right:12px;
+            }
+            .bx-blu{
+                width:100%;
+            }
+        }
+        /* 1280 브레이크 포인트 */
+        @media (min-width:1280px){
+            .wrap{
+                width:1200px;
+            }
+            .txt-bx{
+                width:392px;
+            }
+            .bx-grn{
+                margin-right:12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="txt-bx bx-red">빨강</div>
+        <div class="txt-bx bx-grn">초록</div>
+        <div class="txt-bx bx-blu">파랑</div>
+    </div>
+</body>
+</html>
