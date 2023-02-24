@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃1</title>
+    <style>
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .clearfix>div{
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="clearfix">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <ul>
+            <li>일</li>
+            <li>이</li>
+            <li>삼</li>
+            <li>사</li>
+        </ul>
+    </header>
+</body>
+</html>
