@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형</title>
+  <style>
+    *,::before,::after{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+    ul,ol,li{
+      list-style:none;
+    }
+    a{
+      color:#000;
+      text-decoration:none;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+    :root{
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .clearfix::after{
+      content:'';
+      display:block;
+      clear:both;
+    }
+    /* 기본스타일 */
+    .wrap{
+      font-weight:400;
+      font-size:14px;
+      color:#333;
+      overflow:hidden;
+    }
+    section,footer{
+      height:1000px;
+    }
+
+    header{
+      border-bottom:1px solid #222;
+    }
+    .container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:10px 12px;
+      position:relative;
+    }
+    h1{
+      font-family:'Climate Crisis', cursive;
+      font-weight:900;
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+    }
+    .ico-insta{
+      float:left;
+      width:16px;
+      height:16px;
+      border-radius:25%;
+      background:black;
+      position:relative;
+    }
+    .ico-insta::before,.ico-insta::after,.ico-insta span{
+      content:'';
+      display:block;
+      width:12px;
+      height:12px;
+      border:1.5px solid white;
+      border-radius:25%;
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+    }
+    .ico-insta::after{
+      width:6px;
+      height:6px;
+      border-width:1px;
+      border-radius:50%;
+    }
+    .ico-insta span{
+      width:1px;
+      height:1px;
+      border:none;
+      border-radius:50%;
+      background:white;
+      left:11px;
+      top:4.8px;
+      text-indent:-99999px;
+    }
+    .btn-nav{
+      float:right;
+    }
+    .btn-nav::before,.btn-nav::after,.btn-nav span{
+      content:'';
+      display:block;
+      width:3px;
+      height:3px;
+      margin-bottom:3px;
+      border-radius:50%;
+      background:black;
+      text-indent:-999999px;
+      font-size:0;
+    }
+    nav{
+      height:calc(100vh - 39.334px);
+      padding:20px;
+      position:absolute;
+      left:100%;
+      right:-100%;
+      top:39.334px;
+      background-color:black;
+      transition:0.3s;
+    }
+    nav li{
+
+      border-bottom:1px solid #999;
+      padding:6px;
+    }
+    nav a{
+      font-size:16px;
+      color:#fff;
+    }
+
+    /* 768이상 */
+    @media (min-width:768px){
+      nav{
+        height:auto;
+        padding:12px;
+        left:0;
+        right:0;
+        top:-47.333px;
+      }
+      nav li{
+        float:left;
+        width:20%;
+        border-bottom:none;
+        padding:0;
+        text-align:center;
+      }
+    }
+
+    /* 1200이상 */
+    @media (min-width:1200px){
+      .container{
+        padding-left:24px;
+        padding-right:24px;
+      }
+      h1{
+        left:0;
+        top:0;
+        transform:translate(0,20%);
+      }
+      .ico-insta{
+        float:right;
+      }
+      .btn-nav{
+        display:none;
+      }
+      nav{
+        width:60%;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        background-color:transparent;
+      }
+      nav a{
+        font-weight:700;
+        color:#222;
+      }
+      .ico-insta{
+        transform:scale(1.2);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <section class="wrap">
+    <header class="header">
+      <div class="container">
+        <h1>LOGO</h1>
+        <div class="clearfix">
+          <a href="#" class="ico-insta"><span>인스타그램 아이콘</span></a>
+          <div class="btn-nav" id="tri-nav">
+            <span>네비버튼</span>
+          </div>
+        </div>
+        <nav>
+          <ul class="clearfix">
+            <li><a href="#">NAV01</a></li>
+            <li><a href="#">NAV02</a></li>
+            <li><a href="#">NAV03</a></li>
+            <li><a href="#">NAV04</a></li>
+            <li><a href="#">NAV05</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section></section>
+    <footer></footer>
+  </section>
+  <script>
+    let triBtn = document.querySelector('#tri-nav');
+    let tarNav = document.querySelector('nav');
+    triBtn.onclick=function(){
+      tarNav.style.left=0;
+      tarNav.style.right=0;
+      tarNav.style.top='39.334px';
+    }
+  </script>
+</body>
+</html>
