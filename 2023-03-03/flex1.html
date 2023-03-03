@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        *{
+            /* box-sizing:border-box; */
+            /* margin:0; */
+            /* padding:0; */
+        }
+        .btn01:hover ~ .flex-box{
+            flex-direction:row;
+        }
+        .btn02:hover ~ .flex-box{
+            flex-direction:row-reverse;
+        }
+        .btn03:hover ~ .flex-box{
+            flex-direction:column;
+        }
+        .btn04:hover ~ .flex-box{
+            flex-direction:column-reverse;
+        }
+        .flex-box{
+            /* width:360px; */
+            /* height:500px; */
+            /* margin:20px auto; */
+            /* border:2px solid black; */
+            /* padding:0 12px; */
+            /* display:flex; */
+            /* flex-direction:row; */
+            /* flex-wrap:nowrap; */
+            /* padding:0; */
+            background-color:aqua;
+            display:flex;
+            /* 기본값 */
+            /* flex-direction:row; */
+            /* flex-wrap:nowrap; */
+            /* flex-direction:row; */
+            /* flex-direction:row-reverse; */
+            /* flex-direction:column; */
+            /* flex-direction:column-reverse; */
+            /* flex-wrap:nowrap; */
+        }
+        .flex-item{
+            /* width:75px; */
+            /* margin-right:12px; */
+            /* border:1px solid black; */
+            /* text-align:center; */
+            margin:10px;
+            padding:20px;
+            background-color:white;
+        }
+        .flex-item:last-child{
+            /* margin-right:0; */
+        }
+    </style>
+</head>
+<body>
+    <button class="btn01">가로</button>
+    <button class="btn02">거꾸로 가로</button>
+    <button class="btn03">세로</button>
+    <button class="btn04">거꾸로 세로</button>
+    <div class="flex-box">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+    </div>
+</body>
+</html>

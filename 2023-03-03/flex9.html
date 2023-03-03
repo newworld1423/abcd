@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날씨</title>
+    <style>
+        :root{
+            font-size:14px;
+            color:#333;
+        }
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-weight:400;
+            font-size:16px;
+        }
+        ul,ol,li{
+            list-style:none;
+        }
+        a{
+            color:#333;
+            text-decoration:none;
+        }
+        img{
+            width:100%;
+            vertical-align:bottom;
+        }
+        .sec{
+            height:400px;
+            color:#fff;
+            /* text-align:center; */
+            /* line-height:400px; */
+        }
+        .sec01{
+            background-color:red;
+        }
+        .sec02{
+            background-color:green;
+        }
+        .sec03{
+            background-color:blue;
+        }
+        .footer{
+            height:100px;
+            background-color:cyan;
+            color:#fff;
+        }
+        .sec,.footer{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        /* 기본스타일 */
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both
+        }
+        .wrap{
+            width:100%;
+            overflow:hidden;
+        }
+        .header{
+            border:1px solid black;
+            padding:12px 0;
+            position:relative;
+        }
+        .container{
+            /* background-color:rgba(0,0,0,0.1); */
+            max-width:1280px;
+            margin:0 auto;
+            padding:0 12px;
+            display:flex;
+            flex-flow:row wrap;
+            /* justify-content:space-between; */
+        }
+        .btn-header,.icons-sns{
+            /* width:22.32142857142857%; */
+            flex:1;
+        }
+        h1{
+            /* width:48.21428571428571%; */
+            flex:2;
+            order:2;
+            /* display:flex; */
+            /* justify-content:center; */
+            font-weight:900;
+            font-size:20px;
+            text-align:center;
+        }
+        .icons-sns{
+            order:3;
+            display:flex;
+            justify-content:flex-end;
+            align-items:center;
+        }
+        .icons-sns>*{
+            width:16px;
+            margin-left:12px;
+        }
+        .btn-header{
+            order:1;
+            display:flex;
+            align-items:center;
+        }
+        .btn-header>*{
+            width:16px;
+            margin-right:12px;
+        }
+        nav{
+            height:calc(100vh - 51px);
+            padding:12px;
+            position:absolute;
+            left:-100%;
+            right:100%;
+            /* left:0; */
+            /* right:0; */
+            top:51px;
+            background-color:black;
+            transition:0.3s;
+            /* height:auto; */
+        }
+        nav li{
+            margin:20px 0;
+            font-size:18px;
+        }
+        nav a{
+            font-weight:500;
+            color:#fff;
+        }
+        /* 768이상 */
+        @media(min-width:768px){
+
+        }
+        /* 1280이상 */
+        @media(min-width:1280px){
+            .header{
+                padding:24px 0;
+            }
+            h1{
+                font-size:36px;
+            }
+            .icons-sns>*,.btn-header>*{
+                width:36px;
+            }
+            .btn-nav{
+                display:none;
+            }
+            nav{
+                height:auto;
+                left:0;
+                right:0;
+                top:96px;
+            }
+            nav li{
+                float:left;
+                width:20%;
+                margin:0;
+                text-align:center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <header class="header">
+            <div class="container">
+                <h1><a href="#">ForToday</a></h1>
+                <div class="icons-sns">
+                    <div class="icon01"><a href="#"><img src="./images/ico01.png" alt="인스타그램"></a></div>
+                    <div class="icon02"><a href="#"><img src="./images/ico02.png" alt="페이스북"></a></div>
+                </div>
+                <div class="btn-header">
+                    <div id="btn-nav" class="btn-nav" title="클릭하면 메뉴열림"><img src="./images/btn-nav.png"" alt="네비게이션 버튼"></div>
+                    <div class="logo"><a href="#"><img src="./images/logo (1).png" alt="로고"></a></div>
+                </div>
+                <nav id="nav" class="nav">
+                    <ul class="clearfix">
+                        <li><a href="#">기상예측</a></li>
+                        <li><a href="#">자연재해</a></li>
+                        <li><a href="#">기상특보</a></li>
+                        <li><a href="#">실시간 채팅</a></li>
+                        <li><a href="#">정보</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="sec sec01">섹션01</section>
+        <section class="sec sec02">섹션02</section>
+        <section class="sec sec03">섹션03</section>
+        <footer class="footer">푸터</footer>
+    </section>
+    <!-- <script>
+        let btnNav = document.querySelector('#btn-nav');
+        let nav = document.querySelector('#nav');
+        btnNav.onclick=function(){
+            nav.style.left=0;
+            nav.style.right=0;
+        }
+    </script> -->
+</body>
+</html>
