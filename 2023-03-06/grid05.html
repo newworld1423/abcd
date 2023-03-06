@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+        .wrap{
+            padding:0 12px;
+            display:grid;
+            gap:36px 0;
+        }
+        .header{
+            display:flex;
+            grid-template-columns:1fr 2fr 1fr;
+        }
+        h1{
+            order:2;
+        }
+        .icons{
+            order:1;
+        }
+        .btn-nav{
+            order:3;
+        }
+        .sec{
+            display:grid;
+            grid-template-areas:'ired''igreen''iblue';
+            /* grid-template-areas:'ired igreen''iblue iblue'; */
+            /* grid-template-areas:'ired igreen iblue'; */
+            gap:32px 12px;
+        }
+        .box01{
+            background-color:red;
+            grid-area:ired;
+        }
+        .box02{
+            background-color:green;
+            grid-area:igreen;
+        }
+        .box03{
+            background-color:blue;
+            grid-area:iblue;
+        }
+        @media (min-width:768px){
+            .sec{
+                grid-template-areas:'ired igreen''iblue iblue';
+            }
+        }
+        @media (min-width:960px){
+            .sec{
+                grid-template-areas:'ired igreen iblue';
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>로고</h1>
+        <div class="icons">아이콘</div>
+        <div class="btn-nav">버튼네비</div>
+    </header>
+    <section class="sec">
+        <div class="box box01">red</div>
+        <div class="box box02">green</div>
+        <div class="box box03">blue</div>
+    </section>
+</body>
+</html>
