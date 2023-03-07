@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빽다방</title>
+    <!-- BXslider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <!-- 리셋 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 스킵메뉴 -->
+    <link rel="stylesheet" href="./css/skip.css">
+    <!-- 헤더스타일 -->
+    <link rel="stylesheet" href="./css/resp-header.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+        *{
+            /* box-sizing:border-box; */
+            /* margin:0; */
+            /* padding:0; */
+        }
+        ul,ol,li{
+            /* list-style:none; */
+        }
+        a{
+            /* color:#000; */
+            /* text-decoration:none; */
+        }
+        img{
+            /* width:100%; */
+            /* vertical-align:bottom; */
+        }
+        h1,h2,h3,h4,h5,h6{
+            /* font-weight:400; */
+            /* font-size:1rem; */
+        }
+        strong,b{
+            /* font-weight:400; */
+        }
+        i,u,em{
+            /* text-decoration:none; */
+        }
+        .skip>a{
+            /* position:absolute; */
+            /* left:50%; */
+            /* top:0; */
+            /* transform:translate(-50%,-100%); */
+            /* padding:10px; */
+            /* background-color:#000; */
+            /* color:#fff; */
+        }
+        .skip>a:focus{
+            /* transform:translateY(0); */
+        }
+        .wrap{
+            overflow:hidden;
+        }
+        .ds-none{
+            display:none;
+        }
+        /* HEADER CSS */
+        .header{
+            /* position:fixed; */
+            /* left:0; */
+            /* right:0; */
+            /* top:0; */
+        }
+        .header .container{
+            /* max-width:1080px; */
+            /* height:70px; */
+            /* margin:0 auto; */
+            /* padding:0 10px; */
+            /* background-color:#fff; */
+            /* display:flex; */
+            /* flex-flow:row nowrap; */
+            /* justify-content:space-between; */
+            /* align-items:center; */
+        }
+        h1 a{
+            /* display:block; */
+            /* width:97px; */
+            /* height:30px; */
+            /* text-indent:-99999px; */
+            /* background:url('./images/logo.png') no-repeat center; */
+            /* background-size:contain; */
+        }
+        .btn-nav{
+            /* height:24px; */
+            /* display:flex; */
+            /* flex-flow:column nowrap; */
+            /* justify-content:space-between; */
+            /* display:grid; */
+            /* gap:6px 0; */
+        }
+        .btn-nav::before,.btn-nav::after,.btn-nav>span{
+            /* content:''; */
+            /* display:block; */
+            /* width:30px; */
+            /* height:4px; */
+            /* border-radius:2px; */
+            /* background-color:#000; */
+            /* text-indent:-999999px; */
+        }
+        .btn-nav::before,.btn-nav>span{
+            /* margin-bottom:6px; */
+        }
+        .main-nav{
+            /* height:calc(100vh - 70px); */
+            /* background-color:#f9f9f9; */
+            /* position:absolute; */
+            /* position:fixed; */
+            /* left:30%; */
+            /* left:100%; */
+            /* right:0; */
+            /* right:-100%; */
+            /* top:100%; */
+            /* top:70px; */
+            /* bottom:0; */
+            /* transition:0.3s; */
+        }
+        .main-nav li{
+            /* border-bottom:1px solid #a9a9a9; */
+            /* padding:12px; */
+        }
+        .btn-nav:hover ~ .main-nav{
+            /* left:30%; */
+            /* right:0; */
+        }
+        .header ul{
+            /* display:none; */
+        }
+        .quick-nav{
+            /* display:none; */
+            /* display:flex; */
+            /* justify-content:flex-end; */
+        }
+        .quick-nav li{
+            /* margin-left:12px; */
+            /* font-size:12px; */
+        }
+        .icon-sns{
+            /* display:block; */
+            /* width:20px; */
+            /* height:20px; */
+            /* text-indent:-99999px; */
+            /* background-repeat:no-repeat; */
+            /* background-position:center; */
+            /* background-size:contain; */
+        }
+        .icon-face{
+            /* background-image:url('./images/facebook-ico.png'); */
+        }
+        .icon-inst{
+            /* background-image:url('./images/insta-ico.png'); */
+        }
+        /* HEADER END */
+        /* 메인 슬라이더 */
+        .main-slider{
+            padding-top:70px;
+        }
+        .sec-container{
+            max-width:1728px;
+            margin:0 auto;
+        }
+        .bx-wrapper{
+            box-shadow:none;
+            margin-bottom:0;
+            border:none;
+        }
+        .bx-controls-direction{
+            display:none;
+        }
+        .bx-wrapper .bx-pager{
+            bottom:27px;
+        }
+        .bx-wrapper .bx-pager.bx-default-pager a{
+            background-color:#fff;
+        }
+        .bx-wrapper .bx-pager.bx-default-pager a.active{
+            background-color:#ff0;
+        }
+        .flex-container{
+            display:flex;
+            flex-flow:row wrap;
+        }
+        .flex-container>article{
+            width:100%;
+        }
+        .art01{
+            height:285px;
+            background:url('./images/main_sec1.jpg') no-repeat center;
+            background-size:cover;
+            order:1;
+        }
+        .art02,.art03,.art04,.art05{
+            height:52vw;
+            max-height:540px;
+            background:url('./images/main_sec2.jpg') no-repeat center;
+            background-size:cover;
+        }
+        .art02{
+            order:2;
+        }
+        .art03{
+            background-image:url('./images/main_sec3.jpg');
+            order:3;
+        }
+        .art04{
+            background-image:url('./images/main_sec4.jpg');
+            order:4;
+        }
+        .art05{
+            background-image:url('./images/main_sec5.jpg');
+            order:5;
+        }
+        .art06{
+            order:6;
+        }
+        .art07{
+            order:7;
+        }
+        .contents{
+            max-width:1080px;
+            height:100%;
+            margin:0 auto;
+            padding:30px 16px 15px;
+            display:flex;
+            /* flex-flow:row wrap; */
+            /* justify-content:space-between; */
+            flex-flow:column nowrap;
+            justify-content:space-between;
+        }
+        .contents h3{
+            font-family:'Montserrat',sans-serif;
+            /* font-weight:900; */
+            font-size:1.4em;
+            text-transform:uppercase;
+        }
+        .art01 h3{
+            font-size:3.2em !important;
+        }
+        .contents p{
+            /* display:none; */
+            font-weight:500;
+            font-size:16px;
+            color:#222;
+        }
+        .contents hr{
+            width:35px;
+            height:2px;
+            margin:20px 0;
+            background-color:black;
+        }
+        .con-btn{
+            align-self:flex-end;
+            position:relative;
+            transition:0.5s;
+        }
+        .con-btn:hover{
+            transform:rotate(360deg);
+            opacity:0;
+        }
+        .con-btn::before,.con-btn::after{
+            content:'';
+            display:block;
+            width:15px;
+            height:2px;
+            border-radius:1px;
+            background-color:#000;
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+        }
+        .con-btn::before{
+            width:2px;
+            height:15px;
+        }
+        .con-btn a{
+            display:block;
+            width:40px;
+            height:40px;
+            border-radius:50%;
+            background-color:#fff;
+            text-indent:-999999px;
+        }
+        .art06 .contents{
+            padding:12px;
+            display:grid;
+            /* grid-template-areas:'fran store'; */
+            grid-template-columns:1fr 1fr;
+            gap:12px;
+        }
+        .franchise{
+            /* grid-area:fran; */
+            /* background-color:black; */
+        }
+        .store{
+            /* grid-area:store; */
+            /* background-color:black; */
+        }
+        .franchise,.store{
+            border:2px solid #071f60;
+            padding:16px;
+        }
+        .art06 h2{
+            margin-bottom:12px;
+            font-weight:900;
+            font-size:1.2em;
+            color:#071f60;
+            text-transform:uppercase;
+        }
+        .franchise{
+            position:relative;
+        }
+        .art06 .img-box{
+            width:40%;
+            position:absolute;
+            right:0;
+            bottom:0;
+        }
+        .art06 p{
+            margin-bottom:100px;
+        }
+        .input-box{
+            /* position:relative; */
+        }
+        .input-box::after{
+            /* content:''; */
+            /* display:block; */
+            /* width:20px; */
+            /* height:20px; */
+            /* background:url(./images/search-ico.png) no-repeat center; */
+            /* background-size:contain; */
+            /* position:absolute; */
+            /* right:48px; */
+            /* top:50%; */
+            /* transform:translateY(-50%); */
+        }
+        .art06 input{
+            display:block;
+            width:80%;
+            margin:0 auto;
+            border:2px solid #071f60;
+            padding:8px;
+        }
+        @media (min-width:768px){
+            .contents{
+                padding:40px 16px 24px;
+            }
+            .contents h3{
+                font-size:1.8em;
+            }
+        }
+        @media (min-width:1200px){
+            .header .container{
+                /* height:111px; */
+                /* padding:0 23px; */
+            }
+            h1 a{
+                /* width:174px; */
+                /* height:58px; */
+            }
+            .btn-nav{
+                /* display:none; */
+            }
+            .quick-nav{
+                /* display:block; */
+                /* display:flex; */
+            }
+            .main-nav{
+                /* position:static; */
+                /* display:none; */
+                /* display:flex; */
+                /* background-color:#fff; */
+            }
+            .main-nav li{
+                /* border-bottom:none; */
+                /* padding:12px 0 12px 48px; */
+            }
+            .main-slider{
+                padding-top:111px;
+            }
+            .bx-wrapper .bx-pager{
+                bottom:24px;
+            }
+            .flex-container>.art03,.flex-container>.art05{
+                width:60%;
+            }
+            .flex-container>.art04,.flex-container>.art06{
+                width:40%;
+            }
+            .art01{
+                height:256px;
+            }
+            .art05{
+                order:6;
+                padding:12px 0;
+                /* background-origin:content-box; */
+            }
+            .art06{
+                order:5;
+            }
+            .contents{
+                padding:60px 16px 36px;
+            }
+            .contents h3{
+                font-size:3.2em;
+            }
+            .con-btn{
+            align-self:flex-start;
+            }
+            .contents p{
+                display:block;
+            }
+            .art03 .contents{
+                float:right;
+                width:700px;
+                /* background-color:rgba(255,0,0,0.2); */
+            }
+            .art06 .contents{
+                float:right;
+                grid-template-columns:100%;
+                width:400px;
+            }
+            .franchise,.store{
+                /* width:100%; */
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="skip">
+        <a href="#menu01">메뉴1</a>
+        <a href="#menu02">메뉴2</a>
+        <a href="#menu03">메뉴3</a>
+        <a href="#menu04">메뉴4</a>
+    </section>
+    <section class="wrap">
+        <header class="header">
+            <div class="container">
+                <h1><a href="./index.html">빽다방</a></h1>
+                <nav>
+                    <div class="btn-nav">
+                        <span>내비버튼</span>
+                    </div>
+                    <ul class="quick-nav">
+                        <li><a href="#">더본코리아</a></li>
+                        <li><a href="#" class="icon-sns icon-face">페이스북</a></li>
+                        <li><a href="#" class="icon-sns icon-inst">인스타그램</a></li>
+                    </ul>
+                    <ul class="main-nav">
+                        <li>빽다방</li>
+                        <li>메뉴</li>
+                        <li>소식</li>
+                        <li>커뮤니티</li>
+                        <li>매장안내</li>
+                        <li>창업안내</li>
+                        <li>고객의 소리</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="sec main-slider">
+            <div class="container sec-container">
+                <div class="slider">
+                    <div class="silde silde01">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="./images/main-banner01-1.jpg">
+                            <img src="./images/main-banner01.jpg" alt="메인배너01">
+                        </picture>
+                    </div>
+                    <div class="silde silde02">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="./images/main-banner02-1.jpg">
+                            <img src="./images/main-banner02.jpg" alt="메인배너02">
+                        </picture>
+                    </div>
+                    <div class="silde silde03">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="./images/main-banner03-1.jpg">
+                            <img src="./images/main-banner03.jpg" alt="메인배너03">
+                        </picture>
+                    </div>
+                    <div class="silde silde04">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="./images/main-banner04-1.jpg">
+                            <img src="./images/main-banner04.jpg" alt="메인배너04">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec main-contents">
+            <div class="container sec-container flex-container">
+                <article class="art01">
+                    <div class="contents">
+                        <div class="con-txt">
+                            <h2>The Finest Quality Coffee Plants</h2>
+                            <h3>PAIK'S COFFEE STORY</h3>
+                            <p>균형잡힌 바디감으로 긴 여운을 남기는 빽다방 커피를 만나보세요.</p>
+                        </div>
+                        <div class="con-btn">
+                            <a href="#">더보기</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="art02">
+                    <div class="contents">
+                        <div class="con-txt">
+                            <h2 class="ds-none">신선한 커피</h2>
+                            <h3>FRESH<br>COFFEE</h3>
+                            <hr>
+                            <p class="ds-none">신선한 뉴크롭 원두를 사용하여 추출한 커피메뉴!</p>
+                        </div>
+                        <div class="con-btn">
+                            <a href="#">더보기</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="art03">
+                    <div class="contents">
+                        <div class="con-txt">
+                            <h2 class="ds-none">다양한 음료</h2>
+                            <h3>VARIOUS<br>BEVERAGE</h3>
+                            <hr>
+                            <p class="ds-none">에이드, 티, 주스 등 취향대로 골라 먹는 즐거움!</p>
+                        </div>
+                        <div class="con-btn">
+                            <a href="#">더보기</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="art04">
+                    <div class="contents">
+                        <div class="con-txt">
+                            <h2 class="ds-none">달콤한 빽스치노</h2>
+                            <h3>SWEET<br>PAIK'S CCINO</h3>
+                            <hr>
+                            <p class="ds-none">달콤 시원한 빽다방 시그니처 메뉴!</p>
+                        </div>
+                        <div class="con-btn">
+                            <a href="#">더보기</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="art05">
+                    <div class="contents">
+                        <div class="con-txt">
+                            <h2 class="ds-none">맛있는 아이스크림/디저트</h2>
+                            <h3>TASTY<br>ICE CREAM /<br>DESSERT</h3>
+                            <hr>
+                            <p class="ds-none">달콤한 아이스크림부터 든든한 브레드까지!</p>
+                        </div>
+                        <div class="con-btn">
+                            <a href="#">더보기</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="art06">
+                    <div class="contents">
+                        <div class="franchise">
+                            <h2>FRANCHISE</h2>
+                            <p>빽다방 창업안내를 도와드리겠습니다.</p>
+                            <div class="img-box">
+                                <img src="./images/main_sec6.png" alt="백종원">
+                            </div>
+                        </div>
+                        <div class="store">
+                            <h2>STORE</h2>
+                            <p>원하시는 지역의 매장을 검색해보세요!</p>
+                            <div class="input-box">
+                                <input type="search" placeholder="Find a store in your area!">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="art07">
+                    <div class="contents">
+                        <h2>paik's coffee sns</h2>
+                        <p>#빽다방&nbsp;&nbsp;&nbsp;#빽스치노&nbsp;&nbsp;&nbsp;#백종원&nbsp;&nbsp;&nbsp;#아메리카노</p>
+                        <hr>
+                        <div class="icon-sns">
+                            <img src="./images/facebook-ico.png" alt="face">
+                            <img src="./images/insta-ico.png" alt="inst">
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <footer class="footer">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci ratione eveniet aliquam deleniti nostrum, quos eum repudiandae doloremque id animi reprehenderit provident ea inventore labore ipsum sed? In, consectetur expedita.
+            Porro commodi quasi aliquid, laborum pariatur aspernatur accusamus laboriosam harum facere ex cum accusantium tempora recusandae eveniet quo facilis reiciendis necessitatibus veniam a quas quia, quod nisi. Nulla, assumenda omnis?
+            Animi, nesciunt! Incidunt ad ex iusto eligendi accusantium modi, cupiditate numquam ea dolores assumenda alias tenetur animi error pariatur at quos. Numquam error pariatur tempora sed placeat minus veritatis maiores.
+            Qui iusto magni cumque exercitationem minima quae labore voluptates vel? Illo nam praesentium harum molestias fuga unde, possimus, cum id adipisci, ducimus distinctio quae suscipit dolor. Deserunt assumenda perferendis suscipit!
+            Eius adipisci unde aspernatur quae beatae explicabo, consequatur sapiente eos iste dolorum fugit autem, dolores reprehenderit. Explicabo animi nam, harum libero iste, perspiciatis unde accusantium officiis debitis sequi, laudantium provident.
+            Voluptate similique unde soluta placeat blanditiis illo? Amet provident repellat perferendis numquam iusto repudiandae ratione ex, delectus fugit quibusdam maiores consectetur, quo odit nemo, a nesciunt soluta quasi porro cupiditate!
+            Expedita odit consectetur, omnis natus quas blanditiis nostrum iure aperiam reiciendis voluptas accusantium pariatur veritatis iusto sit repellat ab maiores nesciunt praesentium amet! Ipsam repudiandae animi eaque dignissimos! Numquam, quam!
+            Maxime iusto, sunt mollitia eaque voluptatem quam doloremque sed eius similique atque accusamus sit repellat, in quia provident. Distinctio veniam quisquam ad saepe doloremque, magni labore debitis quis unde! Fugit!
+            Quam porro ipsam omnis expedita quis facilis consequatur aliquam et, molestias accusamus nesciunt doloribus consectetur ut veniam cupiditate magnam voluptate voluptatibus eaque architecto vero molestiae voluptas fugiat veritatis? Nobis, nam.
+            Atque corrupti illum sit, quasi adipisci voluptatibus libero rerum delectus necessitatibus ea aut saepe beatae, repudiandae, dolores cum. Natus nisi explicabo aut corporis dolores cumque beatae illum sint eaque maxime.
+            Optio libero hic, in veniam asperiores distinctio et dignissimos tenetur quibusdam dicta ex quo expedita praesentium at! Aperiam, suscipit! Veniam, hic laborum omnis rerum voluptates tempora laudantium veritatis tempore itaque?
+            Asperiores, voluptates illum. Rem saepe sit nobis cum, atque dolor accusantium. Quisquam enim quasi nesciunt assumenda repudiandae dicta unde, impedit libero, nulla ad earum. Expedita esse perferendis consequuntur quas assumenda.
+            Magnam, ab in? Nam recusandae possimus tempora omnis voluptates cumque, atque unde et ullam animi molestiae aspernatur qui iste adipisci repellendus harum? Inventore dolorem esse ducimus, eos temporibus magnam obcaecati?
+            Dolor vel earum, possimus praesentium voluptatibus harum debitis sed aut in, et, explicabo quidem reiciendis hic labore quaerat magnam deserunt? Architecto, provident doloribus. Qui, minima iusto veritatis quia odit corporis?
+            Itaque, ipsum? Odio aperiam fugit quam excepturi labore, veniam eligendi fuga consectetur perspiciatis suscipit velit laborum? Veritatis magni porro, nihil a corrupti ipsam minus magnam sit, facere esse dolore doloremque.
+            Corporis, fugiat dolore atque sequi ea, a delectus, culpa asperiores reprehenderit laboriosam optio praesentium maiores sed temporibus eos eveniet eaque itaque recusandae voluptatibus architecto commodi? Fugiat quidem maxime perspiciatis accusamus.
+            Veritatis recusandae omnis ad facere explicabo soluta voluptates, magni porro expedita? Sapiente necessitatibus, aspernatur fuga obcaecati dolor expedita sit omnis inventore corrupti voluptas aut nostrum repellat ad corporis at nisi?
+            Tempora, velit! Cupiditate fugit nihil neque illo optio expedita nostrum tempore harum aliquam at unde nesciunt deserunt aspernatur odio a dolor dolores laboriosam nemo, ratione, saepe quod. Nihil, consequatur consectetur?
+            Nemo ipsum similique officiis dolorem architecto vero minima facilis velit non ea perspiciatis minus sit aut neque harum, incidunt illum vitae suscipit, odit provident optio fugit. Saepe eum ipsam alias?
+            Tempora quod fugiat repellendus odit iste laboriosam, saepe asperiores expedita suscipit maiores necessitatibus omnis a nihil nobis quos. Ab, illo? Quia numquam placeat asperiores porro itaque sunt voluptates quidem dolorum.
+        </footer>
+    </section>
+    <script>
+        $(document).ready(function(){
+          $('.slider').bxSlider();
+        });
+    </script>
+</body>
+</html>
