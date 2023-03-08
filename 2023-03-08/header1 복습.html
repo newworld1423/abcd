@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        a{
+            text-decoration:none;
+            color:inherit;
+        }
+        li{
+            list-style:none;
+        }
+        header{
+            background:#fcc;
+        }
+        header .wrap{
+            background:#cfc;
+            width:900px;
+            margin:0 auto;
+        }
+        header .wrap h1{
+            background:#ccf;
+            text-align:center;
+            line-height:60px;
+        }
+        header .wrap h1 a{
+            background:#ffc;
+        }
+        header .wrap ul{
+            background:#cff;
+        }
+        header .wrap ul:after{
+            content:'';
+            clear:both;
+            display:block;
+        }
+        header .wrap ul li{
+            background:#fcf;
+            float:left;
+        }
+        header .wrap ul li:last-child{
+            width:150px;
+        }
+        header .wrap ul li a:link,header .wrap ul li a:visited{
+            width:150px;
+            display:block;
+            text-align:center;
+            line-height:40px;
+            text-transform:uppercase;
+            background:#ccc;
+            transition:0.3s;
+        }
+        header .wrap ul li a:active,header .wrap ul li a:hover,header .wrap ul li a:focus{
+            background:#eee;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <h1><a href="#">LOGO</a></h1>
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+                <li><a href="#">menu6</a></li>
+            </ul>
+        </div>
+    </header>
+
+</body>
+</html>

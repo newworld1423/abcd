@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        h1{
+            background:#ccc;
+            width:500px;
+            height:200px;
+            padding:20px;
+            margin:40px 20px;
+            border:2px solid #f00;
+        }
+        /*
+        콘텐츠 너비 : width, height
+        전체 너비 : 콘텐츠너비 + 좌우마진 + 좌우패딩 + 좌우보더 = 500 + 40 + 40 + 4 = 584
+        */
+        .box1{
+            width:300px;
+            height:150px;
+            border:4px solid #f00;
+            background:#ffc;
+            padding:30px 45px;
+            margin:20px 40px 30px;
+        }
+        /*
+        콘텐츠 너비 : 300px
+        전체 너비 : 콘텐츠너비 + 좌우마진 + 좌우패딩 + 좌우보더 = 300 + 80 + 90 + 8 = 478px
+        */
+        .box2{
+            width:250px;
+            height:20px;
+            border:4px solid #f00;
+            background:#ff0;
+            border-right:4px dashed #00f;
+            padding:40px 30px 20px 50px;
+            margin:20px;
+            padding-right:40px;
+            width:450px;
+            margin-top:50px;
+        }
+        /*
+        콘텐츠 너비 : 450px
+        전체 너비 : 콘텐츠너비 + 좌우마진 + 좌우패딩 + 좌우보더 = 450 + 40 + 90 + 8 = 588px
+        */
+        .box3{
+            background:#fcf;
+            width:450px;
+            margin:20px 40px 30px;
+            margin-left:20px;
+            border:10px solid #f00;
+            padding:40px 50px 40px 30px;
+            border-right-width:5px;
+            padding:30px 20px 40px;
+            height:90px;
+        }
+        /*
+        콘텐츠 너비 : 450px
+        전체 너비 : 콘텐츠너비 + 좌우마진 + 좌우패딩 + 좌우보더 = 450 + 60 + 40 + 15 = 565px
+        */
+    </style>
+</head>
+<body>
+    <h1>박스모델링</h1>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+</body>
+</html>

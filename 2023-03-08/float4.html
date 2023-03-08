@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* *{
+            margin:0;
+            padding:0;
+        }
+        .wrap{
+            width:800px;
+            margin:0 auto;
+        }
+        header{
+            height:100px;
+            background:#cfc;
+            text-align:center;
+            line-height:100px;
+        }
+        section{
+            padding:100px 0;
+            background:#fcc;
+        }
+        section:after{
+            content:'';
+            clear:both;
+            display:block;
+        }
+        section div{
+            width:240px;
+            height:400px;
+            background:#ccf;
+            float:left;
+            margin-right:40px;
+        }
+        section div:last-child{
+            margin-right:0;
+        }
+        footer{
+            height:100px;
+            background:#ffc;
+            text-align:center;
+            line-height:100px;
+        } */
+
+        /* 선생님 */
+        *{
+            margin:0;
+            padding:0;
+        }
+        header{
+            width:800px;
+            height:100px;
+            background:#cfc;
+            margin:0 auto;
+        }
+        section{
+            width:800px;
+            background:#fcf;
+            margin:0 auto;
+            padding:100px 0;
+        }
+        section .wrap{
+            background:#ffc;
+            margin:100px 0;
+            /* 800px 상속 */
+        }
+        section .wrap:after{
+            content:'';
+            clear:both;
+            display:block;
+        }
+        section .wrap div{
+            width:240px;
+            height:400px;
+            background:#ccc;
+            float:left;
+            margin-right:40px;
+        }
+        section .wrap div:last-child{
+            margin-right:0;
+        }
+        footer{
+            width:800px;
+            height:100px;
+            background:#cff;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <section>
+        <div class="wrap">
+            <div>box1</div>
+            <div>box2</div>
+            <div>box3</div>
+    </section>
+    <footer>footer</footer>
+        <!-- <header>header (800*100)</header>
+        <section>
+            <div>.box1<br>(240*400)</div>
+            <div>.box2<br>(240*400)</div>
+            <div>.box3<br>(240*400)</div>
+        </section>
+        <footer>footer (800*100)</footer> -->
+    </div>
+</body>
+</html>

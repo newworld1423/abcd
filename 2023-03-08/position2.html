@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* *{
+            margin:0;
+            padding:0;
+        }
+        header,footer{
+            width:800px;
+            height:100px;
+            margin:0 auto;
+            background:#cfc;
+        }
+        section{
+            width:800px;
+            margin:0 auto;
+            padding:100px 0;
+            background:#fcc;
+        }
+        .wrap{
+            width:800px;
+            height:400px;
+            margin:0 auto;
+            background:#ff0;
+            position:relative;
+        }
+        section div{
+            width:240px;
+            height:400px;
+            background:#ccf;
+        }
+        .wrap div:nth-child(1){
+            position:absolute;
+            left:0;
+            top:0;
+        }
+        .wrap div:nth-child(2){
+            position:absolute;
+            left:280px;
+            top:0;
+        }
+        .wrap div:nth-child(3){
+            position:absolute;
+            right:0;
+            top:0;
+        }
+        footer{
+            background:#ffc;
+        } */
+
+        /* 선생님 */
+        *{
+            margin:0;
+            padding:0;
+        }
+        header,footer{
+            width:800px;
+            height:100px;
+            background:#cfc;
+            margin:0 auto;
+        }
+        section{
+            background:#fcf;
+            width:800px;
+            margin:0 auto;
+        }
+        section .wrap{
+            background:#ffc;
+            position:relative;
+            height:400px; /* 자식이 모두 position:absolute가 되면 반드시 부모에게 높이를 지정해줘야 한다. */
+        }
+        section .wrap div{
+            width:240px;
+            height:400px;
+            background:#cff;
+            position:absolute;
+            top:0;
+        }
+        section .wrap div:nth-child(1){
+            left:0;
+        }
+        section .wrap div:nth-child(2){
+            left:280px;
+        }
+        section .wrap div:nth-child(3){
+            right:0;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <section>
+        <div class="wrap">
+            <div class="box1">box1</div>
+            <div class="box2">box2</div>
+            <div class="box3">box3</div>
+        </div>
+    </section>
+    <footer>footer</footer>
+</body>
+</html>

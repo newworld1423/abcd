@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        /* 에릭마이어 reset.css : https://meyerweb.com/eric/tools/css/reset/ */
+        header, footer{
+            width:700px;
+            height:100px;
+            background:#ccc;
+            margin:0 auto;
+        }
+        section{
+            background:#cfc;
+            margin:0 auto;
+            width:700px;
+        }
+        section:after{
+            content:'';
+            clear:both;
+            display:block;
+        }
+        section div{
+            width:200px;
+            height:200px;
+            background:#ccf;
+            float:left;
+            margin-right:50px;
+        }
+        section div:last-child{
+            margin-right:0;
+        }
+        footer{
+            background:#fcf;
+        }
+        section div:nth-of-type(3){
+            background:#f00;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <section>
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </section>
+    <footer>footer</footer>
+</body>
+</html>

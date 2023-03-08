@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        header,footer{
+            width:700px;
+            height:100px;
+            margin:0 auto;
+            background:#ff0;
+        }
+        section{
+            width:700px;
+            margin:0 auto;
+            background:#0f0;
+        }
+        section:after{
+            content:'';
+            clear:both;
+            display:block;
+        }
+        section div{
+            width:200px;
+            height:200px;
+            background:#00f;
+            float:left;
+            margin-right:50px;
+        }
+        section div:last-child{
+            margin-right:0;
+        }
+        footer{
+            background:#ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <section>
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </section>
+    <footer>footer</footer>
+</body>
+</html>

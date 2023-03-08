@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style:none;
+        }
+        a{
+            text-decoration:none;
+            color:inherit;
+        }
+        .wrap{
+            width:960px;
+            margin:0 auto;
+            /* background:#ffc; */
+        }
+        header{
+            /* background:#eee; */
+        }
+        header h1.wrap{
+            /* background:#fcf; */
+            text-align:center;
+            line-height:60px;
+        }
+        header h1 a{
+            /* background:#cfc; */
+        }
+        header nav{
+            background:#cff;
+        }
+        header nav ul.wrap{
+            /* background:#ccc; */
+        }
+        header nav ul:after{
+            content:'';
+            clear:both;
+            display:block;
+        }
+        header nav ul li{
+            /* background:#fcc; */
+            float:left;
+            width:160px;
+            height:40px;
+            border-left:1px solid #000;
+            box-sizing:border-box;
+        }
+        header nav ul li:last-child{
+            border-right:1px solid #000;
+        }
+        header nav ul li a:link,header nav ul li a:visited{
+            background:#cff;
+            display:block;
+            line-height:40px;
+            text-align:center;
+            text-transform:uppercase;
+            transition:0.3s;
+        }
+        header nav ul li a:hover,header nav ul li a:active,header nav ul li a:focus{
+            background:#009;
+            color:#fff;
+        }
+        header:hover h1 a{
+            /* background:#f00; */
+        }
+        header:hover nav ul li a{
+            /* color:#f00; */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="wrap">
+            <a href="#">LOGO</a>
+        </h1>
+        <nav>
+            <ul class="wrap">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+                <li><a href="#">menu6</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
