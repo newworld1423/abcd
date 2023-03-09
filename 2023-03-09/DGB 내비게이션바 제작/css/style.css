@@ -1,0 +1,100 @@
+
+/* web font */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+img{
+    vertical-align:top;
+}
+body{
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:16px;
+}
+header{
+    /* background:#fcc; */
+    border-top:1px solid #777;
+    border-bottom:1px solid #007dc6;
+    height:110px;
+}
+.wrap{
+    /* background:#cfc; */
+    width:990px;
+    margin:0 auto;
+    position:relative;
+}
+header h1{
+    /* background:#ccf; */
+    padding-top:50px;
+}
+header .tnb1{
+    /* background:#ffc; */
+    position:absolute;
+    top:15px;
+}
+header ul:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+header .tnb1 li{
+    /* background:#fcf; */
+    float:left;
+    margin-right:15px;
+    font-size:14px;
+    color:#777;
+}
+header .tnb1 li:first-child:after{
+    content:'|';
+    margin-left:15px;
+}
+header .tnb2{
+    position:absolute;
+    top:15px;
+    right:0;
+}
+header .tnb2 li{
+    float:left;
+    font-size:14px;
+    color:#777;
+}
+header .tnb2 li:after{
+    content:'|';
+    margin:0 10px;
+}
+header .tnb2 li:last-child:after{
+    display:none;
+}
+header .gnb{
+    /* background:#ccc; */
+    position:absolute;
+    right:0;
+    top:57px;
+}
+header .gnb li{
+    float:left;
+    margin-left:50px;
+}
+header .gnb li a:link,header .gnb li a:visited{
+    color:#222;
+    font-size:20px;
+    font-weight:bold;
+}
+header .gnb li a:hover,header .gnb li a:active,header .gnb li a:focus{
+    color:#007dc6;
+}

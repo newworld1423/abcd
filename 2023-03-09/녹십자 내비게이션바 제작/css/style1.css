@@ -1,0 +1,75 @@
+/* web font */
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+/* reset */
+*{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style:none;
+    font-family:'NanumSquare';
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+img{
+    vertical-align:top;
+}
+
+/* header */
+header{
+    /* background:#fcc; */
+    height:120px;
+    border-bottom:1px solid #ddd;
+}
+header .wrap{
+    /* background:#cfc; */
+    width:1160px;
+    margin:0 auto;
+    position:relative;
+    padding:60px;
+}
+header h1{
+    /* background:#ccf; */
+}
+header .tnb{
+    /* background:#ffc; */
+    position:absolute;
+    right:0;
+    top:30px;
+}
+header ul:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+header .tnb li{
+    /* background:#fcf; */
+    float:left;
+    font-size:14px;
+    font-weight:bold;
+}
+header .tnb li:after{
+    content:'|';
+    margin:0 10px;
+}
+header .tnb li:last-child{
+    color:#090;
+}
+header .tnb li:last-child:after{
+    display:none;
+}
+header .gnb{
+    /* background:#cff; */
+    position:absolute;
+    right:0;
+    top:70px;
+}
+header .gnb li{
+    float:left;
+    margin-left:120px;
+    font-size:20px;
+    font-weight:bold;
+}

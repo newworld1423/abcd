@@ -1,0 +1,126 @@
+/* web font */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+img{
+    vertical-align:top;
+}
+
+/* common */
+body{
+    font-family: 'Noto Sans KR';
+    font-size:16px;
+}
+.wrap{
+    width:990px;
+    margin:0 auto;
+    position:relative;
+}
+
+/* header */
+header{
+    /* background:#eee; */
+    border-top:1px solid #777;
+    height:110px;
+    border-bottom:1px solid #007dc6;
+}
+header .wrap{
+    /* background:#ffc; */
+}
+header h1{
+    /* background:#fcf; */
+    padding-top:50px;
+}
+header .gnb{
+    /* background:#fcc; */
+    font-size:20px;
+    font-weight:bold;
+    position:absolute;
+    right:0;
+    top:56px;
+}
+header .gnb:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+header .gnb li{
+    float:left;
+    margin-left:60px;
+}
+header .gnb li:link,header .gnb li:visited{
+    color:#222;
+}
+header .gnb li:hover,header .gnb li:active,header .gnb li:focus{
+    color:#007dc6
+}
+header .fnb{
+    /* background:#ccf; */
+    position:absolute;
+    left:0;
+    top:16px;
+}
+header .fnb:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+header .fnb li{
+    float:left;
+    margin-right:20px;
+    font-size:14px;
+    color:#777;
+}
+header .fnb li:first-child{
+    margin-right:0;
+}
+header .fnb li:first-child:after{
+    content:'|';
+    margin:0 15px;
+    font-size:12px;
+    position:relative;
+    top:-2px;
+}
+
+header .tnb{
+    /* background:#cff; */
+    position:absolute;
+    right:0;
+    top:16px;
+}
+header .tnb:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+header .tnb li{
+    float:left;
+    font-size:14px;
+    color:#777;
+}
+header .tnb li:before{
+    content:'|';
+    margin:0 10px;
+    font-size:12px;
+    position:relative;
+    top:-2px;
+}
+header .tnb li:first-child:before{
+    display:none;
+}

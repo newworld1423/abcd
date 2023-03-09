@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style:none;
+        }
+        a{
+            text-decoration:none;
+            color:inherit;
+        }
+        .wrap{
+            width:1140px;
+            margin:0 auto;
+            position:relative;
+        }
+        header{
+            /* background:#eee; */
+        }
+        header div.wrap{
+            /* background:#ffc; */
+        }
+        header h1{
+            /* background:#fcf; */
+        }
+        header h1 a{
+            /* background:#cfc; */
+            line-height:60px;
+        }
+        header .tnb{
+            /* background:#cff; */
+            position:absolute;
+            right:0;
+            top:22px;
+        }
+        header .tnb:after{
+            content:'';
+            clear:both;
+            display:block;
+        }
+        header .tnb li{
+            /* background:#ccc; */
+            float:left;
+            margin-left:30px;
+        }
+        header nav{
+            background:#ff0;
+        }
+        header nav .gnb:after{
+            content:'';
+            clear:both;
+            display:block;
+        }
+        header nav .gnb li{
+            float:left;
+            width:190px;
+            height:40px;
+            text-align:center;
+            line-height:40px;
+            border-left:1px solid #000;
+            box-sizing:border-box;
+        }
+        header nav .gnb li:last-child{
+            border-right:1px solid #000;
+        }
+        header nav .gnb li a:link,header nav .gnb li a:visited{
+            /* background:#fc3; */
+            display:block;
+            transition:0.3s;
+        }
+        header nav .gnb li a:hover,header nav .gnb li a:active,header nav .gnb li a:focus{
+            background:#d8aeff;
+        }
+    </style>
+    <!-- <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style:none;
+        }
+        a{
+            text-decoration:none;
+            color:inherit;
+        }
+        .wrap{
+            background:#eee;
+            width:1140px;
+            margin:0 auto;
+            position:relative;
+        }
+        header{
+            /* background:#fcc; */
+        }
+        header h1{
+            background:#cfc;
+            position:absolute;
+            left:0;
+            top:0;
+        }
+        header h1 a{
+            background:#ccf;
+            line-height:60px;
+        }
+        header nav.sub-nav{
+            background:#ffc;
+        }
+        header nav.sub-nav ul{
+            background:#cff;
+        }
+        header nav.sub-nav ul li{
+            background:#fcf;
+        }
+        header nav.sub-nav ul li a{
+            line-height:60px;
+            margin-left:20px;
+            position:absolute;
+            right:0;
+            top:0;
+            display:block;
+        }
+        header nav.main-nav{
+            background:#ccc;
+        }
+        header nav.main-nav ul{
+            background:#eee;
+        }
+        header nav.main-nav ul:after{
+            content:'';
+            clear:both;
+            display:block;
+        }
+        header nav.main-nav ul li{
+            background:#fff;
+            float:left;
+            width:160px;
+            text-align:center;
+        }
+        header nav.main-nav ul li a{
+            background:#aaa;
+            display:block;
+            line-height:40px;
+        }
+    </style> -->
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <h1>
+                <a href="#">LOGO</a>
+            </h1>
+            <ul class="tnb">
+                <li><a href="#">JOIN</a></li>
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">SITEMAP</a></li>
+            </ul>
+        </div>
+        <nav>
+            <ul class="wrap gnb">
+                <li><a href="#">MENU1</a></li>
+                <li><a href="#">MENU2</a></li>
+                <li><a href="#">MENU3</a></li>
+                <li><a href="#">MENU4</a></li>
+                <li><a href="#">MENU5</a></li>
+                <li><a href="#">MENU6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- <header>
+        <h1 class="wrap">
+            <a href="#">LOGO</a>
+        </h1>
+        <nav class="sub-nav">
+            <ul class="wrap">
+                <li><a href="#">join</a></li>
+                <li><a href="#">login</a></li>
+                <li><a href="#">sitemap</a></li>
+            </ul>
+        </nav>
+        <nav class="main-nav">
+            <ul class="wrap">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+                <li><a href="#">menu6</a></li>
+            </ul>
+        </nav>
+    </header> -->
+</body>
+</html>
