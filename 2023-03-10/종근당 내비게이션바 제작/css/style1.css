@@ -1,0 +1,113 @@
+/* web font */
+@font-face {
+    font-family: 'str';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* reset */
+*{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+img{
+    vertical-align:top;
+}
+
+/* common */
+body{
+    font:16px/1.6 str;
+    color:#666;
+}
+.wrap{
+    width:990px;
+    margin:0 auto;
+    position:relative;
+}
+
+/* header */
+header{
+    border-bottom:1px solid #d4d4d4;
+}
+header nav{
+    background:#004795;
+    color:#fff;
+    height:50px;
+}
+header nav .fnb{
+    /* background:#3ff; */
+    font-weight:bold;
+}
+header nav .fnb:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+header nav .fnb li{
+    float:left;
+    width:160px;
+    text-align:center;
+    line-height:50px;
+}
+header nav .fnb li.select{
+    background:#fff;
+    color:#004795;
+}
+header nav .fnb li a{
+    display:block;
+}
+header nav .tnb{
+    /* background:#666; */
+    position:absolute;
+    top:0;
+    right:0;
+}
+header nav .tnb:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+header nav .tnb li{
+    float:left;
+    font-size:14px;
+    line-height:50px;
+}
+header nav .tnb li:after{
+    content:'|';
+    margin:0 10px;
+}
+header nav .tnb li:last-child:after{
+    display:none;
+}
+header > .wrap{
+    /* background:#ffc; */
+}
+header h1{
+    padding-top:24px;
+}
+header .gnb{
+    /* background:#cfc; */
+    position:absolute;
+    right:0;
+    top:34px;
+}
+header .gnb:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+header .gnb li{
+    float:left;
+    margin:0 30px;
+    font-size:18px;
+    font-weight:bold;
+    color:#333;
+}

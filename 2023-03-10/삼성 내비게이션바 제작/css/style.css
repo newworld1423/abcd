@@ -1,0 +1,78 @@
+/* web font */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+img{
+    vertical-align:top;
+}
+
+/* common */
+body{
+    font:16px/1.6 'Noto Sans KR';
+    color:#333;
+}
+.wrap{
+    width:1400px;
+    margin:0 auto;
+    position:relative;
+    /* background:#fcf; */
+}
+
+/* header */
+header{
+    /* background:#ccc; */
+    border:1px solid #ddd;
+}
+header h1{
+    position:absolute;
+    top:24px;
+    left:600px;
+}
+header .gnb{
+    /* background:#fcc; */
+    line-height:70px;
+}
+header .gnb:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+header .gnb li{
+    float:left;
+    margin-right:30px;
+}
+header .tnb{
+    position:absolute;
+    top:24px;
+    right:0;
+}
+header .tnb:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+header .tnb li{
+    float:left;
+    margin-right:30px;
+}
+header .tnb img{
+    position:absolute;
+    top:3px;
+    right:0;
+}
