@@ -1,0 +1,292 @@
+/* web font */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); /* 본고딕 */
+@font-face {
+    font-family:'Gmarket';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight:normal;
+    font-style:normal;
+} /* 지마켓산스 */
+
+/* reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+img{
+    vertical-align:top;
+}
+
+/* common */
+body{
+    font-family:'맑은 고딕';
+    color:#111;
+}
+.wrap{
+    width:1000px;
+    margin:0 auto;
+    position:relative;
+    height:100%;
+}
+ul:after{
+    content:'';
+    clear:both;
+    display:block;
+}
+.blind{
+    width:0;
+    height:0;
+    text-indent:-9999px;
+    overflow:hidden;
+    display:none;
+}
+
+/* header */
+header{
+    height:160px;
+    padding:30px 0;
+    width:100%;
+    position:fixed;
+    z-index:99;
+    background:#fff;
+}
+header .wrap{
+    height:100%;
+}
+header .gnb{
+    position:absolute;
+    right:0;
+    bottom:0;
+}
+header .gnb li{
+    float:left;
+    margin-left:60px;
+}
+header .gnb li a:link,header .gnb li a:visited{
+    font-family:'Gmarket';
+    font-weight:bold;
+    font-size:14px;
+}
+header .gnb li a:hover,header .gnb li a:active,header .gnb li a:focus{
+    color:#f00;
+}
+header .snb{
+    position:absolute;
+    right:0;
+    top:0;
+}
+header .snb li{
+    float:left;
+    margin-left:30px;
+}
+header .snb li a{
+    font-family:'Gmarket';
+    font-weight:400;
+    font-size:12px;
+    color:#666;
+}
+.blank{
+    height:160px;
+}
+/* footer */
+footer{
+    background:#000;
+    height:160px;
+    padding:40px 0;
+}
+footer .fnb li{
+    float:left;
+}
+footer .fnb li:after{
+    content:'|';
+    margin:0 10px 0 6px;
+    color:#333;
+}
+footer .fnb li:last-child:after{
+    display:none;
+}
+footer .fnb li a{
+    color:#bbb;
+    font-size:12px;
+    font-weight:bold;
+}
+footer address{
+    margin-top:30px;
+    color:#666;
+    font-size:12px;
+    font-style:normal;
+}
+footer address span:after{
+    content:'|';
+    margin:0 5px;
+}
+footer address span:nth-child(2):after,footer address span:last-child:after{
+    display:none;
+}
+footer .sns{
+    position:absolute;
+    right:0;
+    top:0;
+}
+footer .sns li{
+    text-align:right;
+    margin-top:6px;
+}
+footer .sns li a{
+    color:#fff;
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* section */
+#sec1{
+    background:#eeeeee url(../images/mainimg.jpg) no-repeat center center;
+    height:480px;
+}
+#sec1 .text{
+    height:100%;
+    padding-top:120px;
+}
+#sec1 .text p:nth-child(1){
+    font-family:'Gmarket';
+    font-size:14px;
+}
+#sec1 .text h3{
+    font-size:44px;
+    font-family:'Noto Sans KR';
+    margin-top:10px;
+}
+#sec1 .text p:nth-child(3){
+    font-family:'Noto Sans KR';
+    font-size:14px;
+    margin-top:50px;
+}
+#sec1 ul{
+    position:absolute;
+    bottom:28px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+#sec1 ul li{
+    float:left;
+    width:10px;
+    height:10px;
+    background:#fff;
+    border-radius:100%;
+    margin:0 15px;
+    overflow:hidden;
+}
+#sec1 ul .active{
+    background:#111;
+}
+#sec1 ul li a{
+    display:block;
+    text-indent:-20px;
+}
+#sec2{
+    padding-top:50px;
+    height:410px;
+}
+#sec2 a h3{
+    font-size:14px;
+    font-weight:bold;
+}
+#sec2 ul{
+    margin-top:30px;
+    display:flex;
+    justify-content:space-between;
+}
+#sec2 ul:after{
+    display:none;
+}
+#sec2 ul li{
+    float:left;
+}
+#sec2 ul li h4{
+    padding-top:30px;
+    font-size:14px;
+}
+#sec2 ul li p{
+    padding:20px 0 30px;
+    color:#666;
+    font-size:12px;
+    border-bottom:3px solid #000;
+}
+#sec3{
+    padding-top:60px;
+    height:250px;
+}
+#sec3 .port{
+    background:url(../images/img4.jpg) no-repeat center center;
+    width:650px;
+    height:190px;
+    display:block;
+}
+#sec3 .port h3{
+    font-size:14px;
+    font-weight:bold;
+}
+#sec3 .news{
+    position:absolute;
+    right:0;
+    top:0;
+    border-bottom:1px solid #000;
+    width:300px;
+    height:100%;
+}
+#sec3 .news a{
+    display:block;
+}
+#sec3 .news a h3{
+    font-size:14px;
+    font-weight:bold;
+    color:#111;
+}
+#sec3 .news a p{
+    font-size:12px;
+    color:#666;
+}
+#sec3 .news a:nth-child(2){
+    margin-top:30px;
+}
+#sec3 .news a:nth-child(3){
+    margin-top:10px;
+}
+#sec4{
+    padding:60px 0;
+    height:270px;
+}
+#sec4 ul{
+    display:flex;
+    justify-content:space-between;
+}
+#sec4 ul:after{
+    display:none;
+}
+#sec4 ul li{
+    padding-bottom:30px;
+    border-bottom:1px solid #e6e6e6;
+    width:300px;
+}
+#sec4 ul li h3{
+    font-size:14px;
+    font-weight:bold;
+}
+#sec4 ul li p{
+    margin-top:30px;
+    font-size:12px;
+    color:#666;
+    line-height:1.6;
+}
+#sec4 ul li a{
+    margin-top:30px;
+    display:block;
+}
