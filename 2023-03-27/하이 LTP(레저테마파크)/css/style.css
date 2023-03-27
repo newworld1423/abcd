@@ -1,0 +1,462 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    vertical-align: top;
+}
+
+/* common */
+body{
+    font-size: 16px;
+    color: #111;
+    font-family: 'Noto Sans KR';
+}
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.wrap:after, ul:after, .cl:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.mo{
+    font-family: 'Montserrat';
+}
+.blind{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    display: none;
+    font-size: 0;
+    text-indent: -9999px;
+}
+
+/* header & footer */
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+header .top{
+    background: #0077be;
+    padding: 8px 0;
+}
+header .top a{
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+header .top a span{
+    margin-left: 10px;
+}
+header .bot{
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+header .bot h1{
+    padding: 23.5px 0;
+    height: 70px;
+}
+header .bot h1 a{
+    display: inline-block;
+    height: 23px;
+}
+header .bot .gnb{
+    position: absolute;
+    left: 240px;
+    top: 23.5px;
+}
+header .bot .gnb li{
+    float: left;
+    margin-right: 100px;
+}
+header .bot .gnb li:last-child{
+    margin-right: 0;
+}
+header .bot .gnb li a{
+    font-size: 16px;
+    font-weight: bold;
+}
+header .bot .snb{
+    position: absolute;
+    right: 0;
+    top: 17.5px;
+}
+header .bot .snb img{
+    margin-left: 10px;
+}
+header .gnb2{
+    background: #008cff;
+}
+header .gnb2 ul li{
+    float: left;
+}
+header .gnb2 ul li a{
+    width: 180px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-weight: bold;
+}
+header .gnb2 ul li:first-child{
+    border-right: 1px solid #008cff;
+}
+header .gnb2 ul li:first-child a{
+    width: 80px;
+}
+header .gnb2 ul li .active{
+    background: #0077be;
+}
+
+footer{
+    background: #0077be;
+    padding: 80px 0;
+    color: #fff;
+    height: 400px;
+}
+footer h2{
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 100px;
+}
+footer address{
+    font-style: normal;
+}
+footer address span{
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    float: left;
+    margin-right: 40px;
+}
+footer p{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* index */
+#slide{
+    background:rgba(0,0,0,0.4) url(../images/surfing.jpg) no-repeat center bottom;
+    height: 940px;
+    color: #fff;
+}
+#slide .wrap{
+    height: 940px;
+    padding-top: 310px;
+}
+#slide h2{
+    font-size: 44px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+#slide p{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+#slide .xi-long-arrow-right{
+    width: 40px;
+    background: #fff;
+    border-radius: 100%;
+    color: #0077be;
+    text-align: center;
+    line-height: 40px;
+}
+#slide a:nth-of-type(2){
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 40px;
+    margin-left: 5px;
+}
+#slide ul{
+    position: absolute;
+    bottom: 80px;
+    left: 567px;
+}
+#slide ul li{
+    float: left;
+    width: 12px;
+    height: 12px;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    margin: 0 5px;
+    overflow: hidden;
+    text-indent: -20px;
+}
+#slide ul .active{
+    background: #fff;
+}
+#slide ul li a{
+    display: block;
+}
+
+#event{
+    padding: 110px 0;
+}
+#event h2{
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+}
+#event .wrap div{
+    position: absolute;
+    right: 0;
+    top: 7.5px;
+}
+#event .wrap div .xi-long-arrow-right{
+    width: 40px;
+    height: 40px;
+    background: #0077be;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    margin-right: 5px;
+}
+#event .wrap div a:last-child{
+    font-weight: bold;
+    font-size: 18px;
+}
+#event ul{
+    margin-top: 40px;
+}
+#event ul li{
+    float: left;
+    margin-right: 30px;
+    position: relative;
+}
+#event ul li:last-child{
+    margin-right: 0;
+}
+#event ul li h3{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #0077be;
+    padding: 10px 12px;
+    color: #fff;
+    font-weight: 400;
+}
+#event ul li p{
+    text-align: center;
+}
+#event ul li p span{
+    color: #666;
+    text-decoration: line-through;
+}
+#resort{
+    background: url(../images/resort.jpg) no-repeat center;
+    height: 670px;
+    padding: 110px 0 70px;
+}
+#resort h2{
+    font-size: 38px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+#resort p{
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.6;
+}
+#resort ul{
+    margin-top: 80px;
+}
+#resort ul li{
+    float: left;
+    margin: 0 30px;
+}
+#resort ul li img{
+    margin-bottom: 40px;
+}
+
+#reser{
+    padding: 110px 0;
+}
+#reser article{
+    border: 1px solid #ddd;
+    float: left;
+    margin-right: 30px;
+    width: 380px;
+    height: 240px;
+}
+#reser article:last-child{
+    margin-right: 0;
+}
+#reser article a{
+    display: block;
+    padding-top: 160px;
+}
+#reser article a h3{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+#reser article a h3 p{
+    width: 40px;
+    height: 40px;
+    background: #0077be;
+    border-radius: 100%;
+    line-height: 40px;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+#reser article:nth-child(1){
+    background: url(../images/yanolza.jpg) no-repeat center 40px;
+}
+#reser article:nth-child(2){
+    background: url(../images/goodchoice.jpg) no-repeat center 40px;
+}
+#reser article:nth-child(3){
+    background: url(../images/agoda.jpg) no-repeat center 40px;
+}
+
+#loca{
+    padding: 80px 0;
+    position: relative;
+    background: #d6eaf8;
+    height: 440px;
+    color: #1f2d3a;
+}
+#loca h2{
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+#loca p{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+#loca a{
+    font-size: 36px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+#loca span{
+    font-size: 20px;
+    font-weight: 500;
+}
+#loca img{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* intro */
+#head{
+    padding: 162px 0 52px;
+    border-bottom: 1px solid #ddd;
+}
+#head h2{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#info1{
+    margin: 100px 0;
+}
+#info1 .wrap{
+    height: 580px;
+}
+#info1 h3{
+    width: 800px;
+    height: 130px;
+    font-size: 30px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+#info1 .rt{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 10px solid #0077be;
+    padding: 8px 0 8px 320px;
+}
+#info1 .rb{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#info1 .lb{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 10px solid #2b442e;
+    padding: 8px 100px;
+}
+
+#info2{
+    margin-bottom: 100px;
+}
+#info2 .wrap{
+    height: 580px;
+}
+#info2 h3{
+    width: 800px;
+    height: 130px;
+    font-size: 30px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+#info2 .rt{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 10px solid #822f1f;
+    padding: 8px 0 8px 320px;
+}
+#info2 .rb{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#info2 .lb{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 10px solid #225290;
+    padding: 8px 180px;
+}
+
+#info3{
+    background: url(../images/restaurant.jpg) no-repeat center;
+}
+#info3 h2{
+    line-height: 500px;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+}
