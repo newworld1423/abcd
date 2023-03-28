@@ -1,0 +1,364 @@
+/* web font */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    vertical-align: top;
+}
+h1, h2, h3, strong, p{
+    font-style: normal;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/* common */
+body{
+    font-family: 'Pretendard';
+    color: #242424;
+}
+.wrap{
+    width: 1228px;
+    margin: 0 auto;
+    position: relative;
+}
+.wrap:after, ul:after, .cl:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.blind{
+    position: absolute;
+    text-indent: -9999px;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* header & footer */
+header{
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+header .wrap{
+    width: 1824px;
+}
+header .top{
+    border-bottom: 1px solid #ededed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 56px;
+}
+header .top li{
+    float: left;
+}
+header .top li:after{
+    content: '|';
+    margin: 0 20px;
+}
+header .top li:last-child:after{
+    display: none;
+}
+header .top li a{
+    font-size: 16px;
+    font-weight: 400;
+}
+header .bot{
+    height: 80px;
+}
+header .bot h1{
+    padding: 20px 0;
+}
+header .bot .gnb{
+    position: absolute;
+    left: 270px;
+    top: 86px;
+}
+header .bot .gnb li{
+    float: left;
+    margin-right: 90px;
+}
+header .bot .gnb li a:link, header .bot .gnb li a:visited{
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+header .bot .gnb li a:hover, header .bot .gnb li a:active, header .bot .gnb li a:focus{
+    color: #2323a5;
+}
+header .bot .snb{
+    position: absolute;
+    right: 0;
+    top: 76px;
+}
+header .bot .snb li{
+    float: left;
+    width: 170px;
+    border-radius: 20px;
+    background: #2323a5;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 20px;
+}
+header .bot .snb li:last-child{
+    background: #fff;
+    border: 1px solid #242424;
+    color: #242424;
+}
+
+/* index */
+
+
+#main{
+    padding-top: 136px;
+}
+#main h2{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 70px;
+}
+#main h3{
+    text-align: center;
+    margin-top: 60px;
+    font-size: 50px;
+    font-weight: 900;
+}
+#main a:link, #main a:visited{
+    width: 150px;
+    height: 50px;
+    background: #2323a5;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    margin: 50px auto 0;
+    transition: 0.3s;
+}
+#main a:hover, #main a:active, #main a:focus{
+    background: #fff;
+    color: #2323a5;
+    border: 1px solid #2323a5;
+}
+#main .img-box img{
+    width: 326px;
+}
+#main .img-box img:nth-child(3){
+    width: 556px;
+    vertical-align: bottom;
+}
+
+#serv{
+    padding-top: 230px;
+}
+#serv h2{
+    font-size: 16px;
+    font-weight: 600;
+    color: #9f9f9f;
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+}
+#serv h3{
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 120px;
+}
+#serv .top{
+    margin-bottom: 90px;
+}
+#serv .wrap div strong{
+    color: #2323a5;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    display: block;
+}
+#serv .wrap div p{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+#serv .wrap div p u{
+    text-decoration: none;
+    border-bottom: 1px solid #242424;
+}
+#serv .wrap > p{
+    font-size: 14px;
+    color: #9f9f9f;
+    margin-top: 30px;
+}
+#serv a:link, #serv a:visited{
+    width: 150px;
+    border: 1px solid #242424;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    border-radius: 20px;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-weight: bold;
+    transition: 0.5s;
+}
+#serv a:hover, #serv a:active, #serv a:focus{
+    background: #2323a5;
+    color: #fff;
+}
+
+#search{
+    padding: 200px 0 100px;
+}
+#search .head{
+    width: 600px;
+    height: 70px;
+    padding: 20px 75px 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    border-radius: 35px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 20px;
+}
+#search .head h2{
+    text-align: center;
+    border-bottom: 1px solid #242424;
+    font-size: 24px;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+#search .head h2:after{
+    content: '|';
+    margin-left: -2px;
+}
+#search .head img{
+    position: absolute;
+    right: 40px;
+    top: 16px;
+}
+#search .top{
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+#search .top li{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search .top li div{
+    background: #242424;
+    height: 30px;
+    border-radius: 15px;
+    padding: 7px 20px;
+}
+#search .top li p{
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+#search .top li img{
+    float: right;
+    margin: 4px 0 0 8px;
+    height: 9px;
+}
+#search .img{
+    margin-bottom: 50px;
+}
+#search .img div{
+    width: 299.5px;
+    height: 200px;
+    border-radius: 10px;
+    margin-right: 10px;
+    float: left;
+}
+#search .img div:last-child{
+    margin-right: 0;
+}
+#search .img .img1{
+    background: url(../images/motion-img1.png) no-repeat;
+    background-size: cover;
+}
+#search .img .img2{
+    background: url(../images/motion-img2.png) no-repeat;
+    background-size: cover;
+}
+#search .img .img3{
+    background: url(../images/motion-img3.png) no-repeat;
+    background-size: cover;
+}
+#search .img .img4{
+    background: url(../images/motion-img4.png) no-repeat;
+    background-size: cover;
+}
+#search .img .img5{
+    background: url(../images/motion-img5.png) no-repeat;
+    background-size: cover;
+}
+#search .img .img6{
+    background: url(../images/motion-img6.png) no-repeat;
+    background-size: cover;
+}
+#search .img .img7{
+    background: url(../images/motion-img7.png) no-repeat;
+    background-size: cover;
+}
+#search .img .img8{
+    background: url(../images/motion-img8.png) no-repeat;
+    background-size: cover;
+}
+#search .bot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#search .bot li div{
+    background: #242424;
+    height: 30px;
+    border-radius: 15px;
+    padding: 7px 20px;
+}
+#search .bot li p{
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+#search .bot li img{
+    float: right;
+    margin: 4px 0 0 8px;
+    height: 9px;
+}
+
+#bg{
+    background: url(../images/banner1.png) no-repeat;
+    height: 382px;
+}
