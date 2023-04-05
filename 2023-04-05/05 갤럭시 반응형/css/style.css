@@ -1,0 +1,222 @@
+/* web font */
+@font-face {
+    font-family: 'gsm';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    vertical-align: top;
+}
+
+/* common */
+html{
+    overflow-x: hidden;
+}
+body{
+    font-family: gsm;
+    color: #111;
+    line-height: 1.6;
+}
+ul:after, .cl:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.blind{
+    position: absolute;
+    left: -9999px;
+}
+
+/* header & footer */
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background: #fff;
+}
+header > a{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.blank{
+    height: 60px;
+}
+
+footer{
+    padding: 40px 3%;
+}
+footer p{
+    font-size: 12px;
+    position: absolute;
+    left: 150px;
+    top: 50px;
+}
+footer ul{
+    position: absolute;
+    left: 150px;
+    top: 74px;
+}
+footer ul li{
+    float: left;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+footer ul li:after{
+    content: '|';
+    margin: 0 10px;
+}
+footer ul li:last-child:after{
+    display: none;
+}
+
+/* index */
+#main{
+    position: relative;
+}
+#main h3{
+    font-size: 40px;
+    position: absolute;
+    right: 5%;
+    top: 50px;
+}
+#main img{
+    width: 70%;
+}
+#main p{
+    font-size: 28px;
+    position: absolute;
+    right: 5%;
+    top: 48%;
+}
+
+#event{
+    margin-top: 60px;
+}
+#event ul li{
+    float: left;
+    width: 50%;
+    position: relative;
+}
+#event ul li a h3{
+    position: absolute;
+    color: #fff;
+    left: 20px;
+    top: 20px;
+    font-size: 24px;
+}
+#event ul li a img{
+    width: 100%;
+}
+
+#prd h2{
+    line-height: 100px;
+    padding-left: 3%;
+    font-size: 28px;
+}
+#prd ul li{
+    float: left;
+    width: calc((100% - 60px) / 4);
+    margin-right: 20px;
+    position: relative;
+}
+#prd ul li:last-child{
+    margin-right: 0;
+}
+#prd ul li a img{
+    width: 100%;
+}
+#prd ul li a p{
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width:800px) { /* 모바일용 */
+    .pc{
+        display: none !important;
+    }
+    /* footer */
+    footer p{
+        position: static;
+        margin-top: 10px;
+    }
+    footer ul{
+        position: static;
+        margin-top: 10px;
+    }
+
+    /* index */
+    #main h3{
+        font-size: 28px;
+        position: static;
+        text-align: center;
+        padding: 20px 0;
+    }
+    #main h3 span:before{
+        content: '|';
+        margin: 0 10px;
+        color: #ddd;
+    }
+    #main img{
+        width: 100%;
+    }
+    #main p{
+        font-size: 18px;
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #event{
+        margin-top: 40px;
+    }
+    #event ul li{
+        float: none;
+        width: auto;
+    }
+    #event ul li a h3{
+        left: 10px;
+        top: 10px;
+        font-size: 16px;
+    }
+    #event ul li a img{
+        width: 100%;
+    }
+
+    #prd h2{
+        line-height: 60px;
+        font-size: 18px;
+    }
+    #prd ul li{
+        width: 50%;
+    }
+    #prd ul li a p{
+        font-size: 14px;
+        bottom: 8%;
+    }
+}
+
+@media (min-width:801px) { /* PC용 */
+    .mob{
+        display: none !important;
+    }
+}
