@@ -1,0 +1,319 @@
+/* web font */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    vertical-align: top;
+}
+
+/* common */
+body{
+    font-family: 'Nanum Gothic';
+    font-size: 14px;
+    color: #666;
+}
+.wrap{
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+.wrap:after, ul:after, .cl:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.blind{
+    position: absolute;
+    left: -9999px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+
+/* header & footer */
+header .gnb{
+    position: absolute;
+    left: 126px;
+    top: 36px;
+}
+header .gnb li{
+    float: left;
+    font-size: 16px;
+    font-weight: 900;
+    color: #111;
+    margin-right: 60px;
+}
+header .snb{
+    background: #eee;
+    padding: 0 20px;
+    line-height: 30px;
+    position: absolute;
+    top: 27px;
+    right: 60px;
+    border-radius: 50px;
+}
+header .snb li{
+    float: left;
+    color: #111;
+}
+header .snb li:after{
+    content: '|';
+    margin: 0 8px;
+    color: #999;
+}
+header .snb li:last-child:after{
+    display: none;
+}
+header .fb{
+    position: absolute;
+    right: 0;
+    top: 27px;
+}
+
+footer{
+    border-top: 1px solid #ddd;
+    padding: 20px 0;
+}
+footer .wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+footer img{
+    margin-right: 10px;
+}
+footer ul li{
+    float: left;
+}
+footer ul li:before{
+    content: '|';
+    margin: 0 10px;
+}
+
+/* index */
+#main{
+    height: 460px;
+    background: #111 url(../images/visual.jpg) no-repeat center;
+    color: #fff;
+    text-align: center;
+}
+#main .wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#main b{
+    font-size: 36px;
+    font-weight: 900;
+}
+#main p{
+    font-size: 26px;
+    margin-top: 10px;
+}
+#main a{
+    border: 1px solid #fff;
+    padding: 0 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    line-height: 40px;
+    margin-top: 30px;
+    display:inline-block;
+}
+
+#bnr{
+    background: #f4731f;
+}
+#bnr ul li{
+    float: left;
+    width: 25%;
+    color: #fff;
+}
+#bnr ul li a{
+    display: flex;
+    height: 90px;
+    align-items: center;
+    justify-content: center;
+}
+#bnr ul li a p{
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#cont .award .year{
+    padding: 40px 0;
+    width: 800px;
+    margin: 0 auto;
+}
+#cont .award .year li{
+    float: left;
+    width: 20%;
+    background: url(../images/bg.jpg) no-repeat right center;
+}
+#cont .award .year li:last-child{
+    background: none;
+}
+#cont .award .year li a{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 70px;
+    color: #ccc;
+    border: 1px solid rgba(255,255,255,0);
+}
+#cont .award .year .select a{
+    color: #f4731f;
+    border-color: #f4731f;
+}
+#cont .award .cl > img{
+    float: left;
+}
+#cont .award .cl ul{
+    float: right;
+    width: 490px;
+}
+#cont .award .cl ul li{
+    float: left;
+    width: 240px;
+    margin: 0 10px 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    position: relative;
+}
+#cont .award .cl ul li:nth-child(2n){
+    margin-right: 0;
+}
+#cont .award .cl ul li:nth-child(n+3):nth-child(-n+4){
+    margin-bottom: 0;
+}
+#cont .award .cl ul li img{
+    width: 100%;
+}
+#cont .award .cl ul li p{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+}
+#cont .award .cl ul li p b{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+#cont .bnr{
+    margin-top: 10px;
+}
+#cont .bnr ul{
+    width: 480px;
+    float: left;
+}
+#cont .bnr ul li{
+    float: left;
+    width: 235px;
+    margin-right: 10px;
+}
+#cont .bnr ul li:last-child{
+    margin-right: 0;
+}
+#cont .bnr ul li a{
+    display: block;
+    line-height: 120px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 900;
+    color: #111;
+    background: #ddd;
+}
+#cont .bnr > a{
+    float: right;
+}
+
+#info{
+    margin-top: 40px;
+    padding: 40px 0;
+    background: #f6f6f6;
+}
+#info article{
+    width: 300px;
+    margin-right: 40px;
+    float: left;
+    position: relative;
+}
+#info article:last-child{
+    margin-right: 0;
+}
+#info article h3{
+    font-size: 16px;
+    font-weight: 900;
+    color: #111;
+    margin-bottom: 10px;
+}
+#info article .more{
+    position: absolute;
+    top: 4px;
+    font-size: 12px;
+    color: #111;
+    left: 72px;
+}
+#info .notice ul li{
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#info .faq ul li{
+    float: left;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ddd;
+    border-right: none;
+    box-sizing: border-box;
+}
+#info .faq ul li:last-child{
+    border-right: 1px solid #ddd;
+}
+#info .faq ul li a{
+    background: #fff;
+    display: block;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#info .faq ul li a p{
+    font-size: 13px;
+    margin-top: 10px;
+}
+#info .faq .more{
+    left: 44px;
+}
+#info .tel > a{
+    color: #f4731f;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 50px;
+}
+#info .tel p{
+    border-top: 1px solid #ddd;
+    line-height: 1.8;
+    font-size: 13px;
+}

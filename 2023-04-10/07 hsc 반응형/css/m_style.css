@@ -1,0 +1,163 @@
+/* 모바일용 */
+@media (max-width:800px){
+    .pc{
+        display: none !important;
+    }
+
+    .wrap{
+        width: 94%;
+    }
+
+    /* header & footer */
+    header .wrap{
+        width: auto;
+    }
+    header .menu{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    footer .wrap{
+        display: block;
+        line-height: 1.6;
+    }
+    footer a{
+        font-weight: bold;
+    }
+
+    /* index */
+    #main{
+        height: 260px;
+        background-size: cover;
+    }
+    #main b{
+        font-size: 24px;
+    }
+    #main p{
+        font-size: 18px;
+    }
+    #main a{
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    #bnr .wrap{
+        width: 100%;
+    }
+    #bnr ul li a{
+        height: 90px;
+        flex-direction: column;
+    }
+    #bnr ul li a img{
+        height: 40px;
+    }
+    #bnr ul li a p{
+        margin-left: 0;
+        font-size: 13px;
+        margin-top: 6px;
+    }
+
+    #cont .award .year{
+        padding: 10px 0;
+        width: auto;
+    }
+    #cont .award .year li{
+        float: none;
+        width: auto;
+        background: none;
+        display: none;
+    }
+    #cont .award .year .select{
+        display: block;
+    }
+    #cont .award .year li a{
+        line-height: 50px;
+        border: none;
+    }
+    #cont .award > a{
+        font-size: 30px;
+        color: #ccc;
+        position: absolute;
+        top: 10px;
+        line-height: 50px;
+    }
+    #cont .award .prev{
+        left: 0;
+    }
+    #cont .award .next{
+        right: 0;
+    }
+    #cont .award .cl > img{
+        float: none;
+        width: 100%;
+    }
+    #cont .award .cl ul{
+        float: none;
+        width: 100%;
+        margin-top: 10px;
+    }
+    #cont .award .cl ul li{
+        width: calc((100% - 10px) / 2);
+    }
+    #cont .award .cl ul li img{
+        width: 100%;
+    }
+    #cont .award .cl ul li p{
+        bottom: 3%;
+    }
+    #cont .award .cl ul li p b{
+        font-size: 14px;
+    }
+    #cont .bnr ul{
+        width: auto;
+        float: none;
+        margin-bottom: 10px;
+    }
+    #cont .bnr ul li{
+        width: calc((100% - 10px) / 2);
+    }
+    #cont .bnr ul li a{
+        line-height: 60px;
+        font-size: 14px;
+    }
+    #cont .bnr > a{
+        float: none;
+    }
+    #cont .bnr > a img{
+        width: 100%;
+    }
+    #info{
+        margin-top: 20px;
+        padding: 20px 0;
+    }
+    #info article{
+        width: auto;
+        margin-right: 0;
+        float: none;
+    }
+    #info article:last-child{
+        margin-top: 40px;
+    }
+    #info .notice ul li{
+        margin-bottom: 0;
+        line-height: 40px;
+        border-bottom: 1px solid #ddd;
+    }
+    #info .tel{
+        text-align: center;
+    }
+    #info .tel h3{
+        text-align: left;
+    }
+    #info .tel p{
+        padding-top: 6px;
+    }
+}
+
+/* PC용 */
+@media (min-width:801px){
+    .mob{
+        display: none !important;
+    }
+}
