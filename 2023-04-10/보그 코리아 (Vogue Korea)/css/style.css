@@ -1,0 +1,134 @@
+/* web font */
+@font-face {
+    font-family: 'ptd';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    vertical-align: top;
+}
+
+/* common */
+body{
+    font-family: 'ptd';
+    font-size: 16px;
+    color: #000;
+}
+.wrap{
+    width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+.wrap:after, ul:after, .cl:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.blind{
+    position: absolute;
+    left: -9999px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+
+/* header & footer */
+header{
+    padding: 40px 0;
+}
+header h1{
+    display: flex;
+    justify-content: center;
+}
+header .gnb{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+header .gnb li{
+    float: left;
+    margin-right: 40px;
+    font-weight: bold;
+}
+header .snb{
+    position: absolute;
+    top: 17px;
+    right: 0;
+}
+header .snb li{
+    float: left;
+    margin-left: 30px;
+    font-weight: bold;
+    line-height: 36px;
+}
+header .snb li:first-child{
+    text-decoration: underline;
+}
+header .snb li:first-child:after{
+    background: url(../images/select_arrow.svg) no-repeat center;
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 7px;
+    padding-bottom: 4px;
+    margin-left: 5px;
+}
+header .snb li:nth-child(2) a{
+    display: block;
+    width: 88px;
+    background: #000;
+    text-align: center;
+    color: #fff;
+}
+header .snb li:nth-child(3) a{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 36px;
+}
+header .snb li a div{
+    width: 24px;
+    height: 2px;
+    background: #000;
+}
+
+/* index */
+#main .wrap{
+    background: url(../images/style_642537ea0d479-1920x1080.jpg) no-repeat center;
+}
+#main a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 800px;
+}
+#main a h3{
+    color: #fff;
+    font-size: 16px;
+}
+#main a h3 span{
+    color: rgba(255,255,255,0.5);
+}
+#main a h3 span:before{
+    content: '|';
+    color: #fff;
+    margin: 0 10px;
+}

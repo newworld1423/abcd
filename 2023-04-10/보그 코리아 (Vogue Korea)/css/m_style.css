@@ -1,0 +1,48 @@
+/* 모바일용 */
+@media (max-width:800px) {
+    .pc{
+        display: none !important;
+    }
+    .wrap{
+        width: 86%;
+    }
+    header{
+        padding: 20px 0;
+    }
+    header h1{
+        justify-content: start;
+    }
+    header h1 a img{
+        height: 33px;
+    }
+    header .gnb{
+        justify-content: start;
+        margin-top: 20px;
+        overflow: scroll;
+    }
+    header .gnb li{
+        margin-right: 20px;
+        font-size: 14px;
+    }
+    header .snb{
+        position: absolute;
+        top: 5px;
+        right: -30px;
+    }
+    header .snb li{
+        margin-left: 20px;
+        line-height: 22px;
+        font-size: 14px;
+    }
+    header .snb li:nth-child(3) a{
+        justify-content: space-between;
+        height: 22px;
+    }
+}
+
+/* PC용 */
+@media (min-width:801px) {
+    .mob{
+        display: none !important;
+    }
+}
