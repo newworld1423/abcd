@@ -1,0 +1,351 @@
+/* web font */
+@font-face {
+    font-family: 'ptd';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    vertical-align: top;
+}
+
+/* common */
+body{
+    font-family: 'ptd';
+    font-size: 16px;
+    color: #000;
+}
+.wrap{
+    width: 84%;
+    margin: 0 auto;
+    position: relative;
+}
+.wrap:after, ul:after, .cl:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.blind{
+    position: absolute;
+    left: -9999px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+
+/* header & footer */
+header{
+    padding: 40px 0;
+    position: fixed;
+    z-index: 99;
+    background: #fff;
+    width: 100%;
+}
+header h1{
+    display: flex;
+    justify-content: center;
+}
+header .gnb{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+header .gnb li{
+    float: left;
+    margin-right: 40px;
+    font-weight: bold;
+}
+header .snb{
+    position: absolute;
+    top: 17px;
+    right: 0;
+}
+header .snb li{
+    float: left;
+    margin-left: 30px;
+    font-weight: bold;
+    line-height: 36px;
+}
+header .snb li:first-child{
+    text-decoration: underline;
+}
+header .snb li:first-child:after{
+    background: url(../images/select_arrow.svg) no-repeat center;
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 7px;
+    padding-bottom: 4px;
+    margin-left: 5px;
+}
+header .snb li:nth-child(2) a{
+    display: block;
+    width: 88px;
+    background: #000;
+    text-align: center;
+    color: #fff;
+}
+header .snb li:nth-child(3) a{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 36px;
+}
+header .snb li a div{
+    width: 24px;
+    height: 2px;
+    background: #000;
+}
+.blank{
+    height: 209px;
+}
+
+/* index */
+#main{
+    margin-bottom: 160px;
+}
+#main a{
+    position: relative;
+    display: block;
+}
+#main a img{
+    width: 100%;
+}
+#main a h3{
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    bottom: 20%;
+    text-align: center;
+    width: 100%;
+}
+#main a h3 span{
+    color: rgba(255,255,255,0.5);
+}
+#main a h3 span:before{
+    content: '|';
+    color: #fff;
+    margin: 0 10px;
+}
+#main a p{
+    font-size: 48px;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10%;
+    text-align: center;
+    width: 100%;
+}
+
+#today{
+    margin-bottom: 160px;
+}
+#today h2{
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+#today .wrap div{
+    width: 40%;
+    float: left;
+}
+#today .wrap div a{
+    position: relative;
+    display: block;
+}
+#today .wrap div a img{
+    width: 100%;
+}
+#today .wrap div a h3{
+    position: absolute;
+    left: 6%;
+    bottom: 18%;
+    font-size: 18px;
+    color: #fff;
+}
+#today .wrap div a h3 span{
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+}
+#today .wrap div a h3 span:before{
+    content: '|';
+    color: rgba(255,255,255,0.5);
+    margin: 0 10px;
+}
+#today .wrap div a p{
+    position: absolute;
+    left: 6%;
+    bottom: 10%;
+    font-size: 32px;
+    color: #fff;
+}
+#today ul{
+    float: right;
+    width: 58%;
+}
+#today ul li{
+    float: left;
+    width: 48%;
+}
+#today ul li:nth-child(2n){
+    margin-left: 4%;
+}
+#today ul li:nth-child(-n+3){
+    margin-bottom: 80px;
+}
+#today ul li a{
+    display: block;
+}
+#today ul li a:hover h4{
+    text-decoration: underline;
+}
+#today ul li a img{
+    width: 100%;
+    margin-bottom: 30px;
+}
+#today ul li a h3{
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: normal;
+}
+#today ul li a h4{
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+#today ul li a span{
+    font-size: 14px;
+    color: #999;
+}
+#today ul li a span:after{
+    content: '|';
+    margin: 0 6px;
+}
+#today ul li a span:last-child:after{
+    display: none;
+}
+
+#best{
+    position: relative;
+    padding-bottom: 100px;
+    margin-bottom: 160px;
+}
+#best h2{
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+#best .wrap div{
+    position: absolute;
+    top: 18px;
+    right: 0;
+}
+#best .wrap div a .prev{
+    transform: rotate(180deg);
+    opacity: 0.5;
+    margin-right: 30px;
+}
+#best ul li{
+    float: left;
+    width: 23.5%;
+    margin-right: 2%;
+}
+#best ul li:last-child{
+    margin-right: 0;
+}
+#best ul li a img{
+    width: 100%;
+    margin-bottom: 30px;
+}
+#best ul li a h3{
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+#best ul li a h4{
+    font-size: 22px;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+}
+#best ul li a span{
+    font-size: 13px;
+    color: #999;
+}
+#best ul li a span:after{
+    content: '|';
+    color: #999;
+    margin: 0 4px 0 6px;
+}
+#best ul li a span:last-child:after{
+    display: none;
+}
+#best .bggray{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 380px;
+    background: #f5f5f5;
+    z-index: -1;
+}
+
+#must{
+    margin-bottom: 160px;
+}
+#must h2{
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+#must ul li{
+    float: left;
+    width: 23.5%;
+    margin-right: 2%;
+}
+#must ul li:last-child{
+    margin-right: 0;
+}
+#must ul li a img{
+    width: 100%;
+    margin-bottom: 30px;
+}
+#must ul li a h3{
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+#must ul li a h4{
+    font-size: 22px;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+}
+#must ul li:nth-child(2) a h4{
+    letter-spacing: -2px;
+}
+#must ul li a span{
+    font-size: 13px;
+    color: #999;
+}
+#must ul li a span:after{
+    content: '|';
+    color: #999;
+    margin: 0 4px 0 6px;
+}
+#must ul li a span:last-child:after{
+    display: none;
+}
