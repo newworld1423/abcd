@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        1~100까지 숫자를 출력하되
+        3의 배수이면 "짝"을 출력하시오.
+
+        1 2 짝 4 5 짝 7 8 짝 10 ... 짝 100
+    -->
+    <script>
+        for (var i=1; i<=100; i++) {
+            if (i % 3 == 0) {
+                document.write("짝 ");
+            } else {
+            document.write(i+" ");
+            }
+        }
+    </script>
+</body>
+</html>

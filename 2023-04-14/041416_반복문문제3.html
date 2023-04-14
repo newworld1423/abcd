@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>누적값 구하기</h1>
+    <!--
+        사용자에게 값을 입력받아서
+        1부터 해당 값까지 출력하고
+        총 누적값을 계산하시오.
+        10을 입력시
+        1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55
+    -->
+    <script>
+        var sum = 0;
+        var n = Number(prompt("숫자입력"));
+
+        for (var i=1; i<=n; i++) {
+            sum = sum + i; // 누적값
+
+            document.write(i);
+            if(i == n){
+                break;
+            }
+            document.write(" + ")
+        }
+        document.write(" = "+sum);
+    </script>
+    <script>
+        var sum = 0;
+        var n = Number(prompt("숫자입력"));
+
+        for (var i=1; i<=n; i++) {
+            sum = sum + i; // 누적값
+
+            if(i == n){
+                document.write(i + " = " + sum);
+            } else {
+                document.write(i + " + ")
+            }
+        }
+    </script>
+</body>
+</html>

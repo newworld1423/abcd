@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>논리연산자</h1>
+    <script>
+        var n = 7;
+        document.write("n은 3의 배수 그리고 7의 배수인가? " + (n % 3 == 0 && n % 7 == 0)+"<br>"); // and
+        document.write("n은 3의 배수 또는 7의 배수인가? " + (n % 3 == 0 || n % 7 == 0)+"<br>"); // or
+        document.write("n은 3의 배수가 아니다 " + (n % 3 != 0)); // not
+    </script>
+</body>
+</html>

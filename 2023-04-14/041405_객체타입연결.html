@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체타입연결</title>
+</head>
+<body>
+    <script>
+        var data1 = "홍길동" + " 님의 " + "나이는<br>"; // 홍길동 님의 나이는
+        var data2 = "홍길동 님의 나이는 " + 27; // 홍길동 님의 나이는 27
+        var data3 = "홍길동 님의 나이는 " + 27 + "세 입니다."; // 홍길동 님의 나이는 27세 입니다.
+        var data4 = 20 + 37; // 57
+        var data5 = 20 + 37 + "홍길동"; // 57홍길동
+        var data6 = 20 + 37 + "홍길동" + 40 + 30; // 57홍길동4030
+        // 문자뒤의 숫자는 문자처럼 처리
+        var data7 = 20 + 37 + "홍길동" + (40 + 30); // 57홍길동70
+
+        document.write(data7);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select>
+        <script>
+            for (var y=2023; y>=1900; y--){
+                document.write("<option>" + y + "</option>")
+            }
+        </script>
+    </select> 년
+    <select>
+        <script>
+            for (var m=1; m<=12; m++){
+                document.write("<option>" + m + "</option>")
+            }
+        </script>
+    </select> 월
+    <select>
+        <script>
+            for (var d=1; d<=31; d++){
+                document.write("<option>" + d + "</option>")
+            }
+        </script>
+    </select> 일
+</body>
+</html>

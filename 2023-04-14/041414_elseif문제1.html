@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>else if 문제1</h1>
+    <!--
+        사용자에게 국어, 영어, 수학 점수를 각각 입력받아서
+        총점과 평균을 구하고
+        평균이 90점 이상이면 A
+        80점 이상이면 B
+        70점 이상이면 C
+        60점 이상이면 D
+        그 외에는 F 학점
+
+        국어 : 00점
+        영어 : 00점
+        수학 : 00점
+        총점 : 00점
+        평균 : 00점
+        당신의 학점은 A학점입니다.
+    -->
+    <script>
+        var kor = Number(prompt("국어점수"));
+        var eng = Number(prompt("영어점수"));
+        var mat = Number(prompt("수학점수"));
+        var sum = kor + eng + mat;
+        var avg = Math.round(sum / 3);
+        var lev;
+        if(avg >= 90){
+            lev = "A";
+        } else if(avg >= 80 ){
+            lev = "B";
+        } else if(avg >= 70 ){
+            lev = "C";
+        } else if(avg >= 60 ){
+            lev = "D";
+        } else{
+            lev = "F";
+        }
+        document.write("국어 : "+kor+"점<br>")
+        document.write("영어 : "+eng+"점<br>")
+        document.write("수학 : "+mat+"점<br>")
+        document.write("총점 : "+sum+"점<br>")
+        document.write("평균 : "+avg+"점<br>")
+        document.write("당신의 학점은 "+lev+"학점입니다.")
+
+    </script>
+</body>
+</html>
