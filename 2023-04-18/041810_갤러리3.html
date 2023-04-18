@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갤러리</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        img{
+            vertical-align: top;
+        }
+        body{
+            background: #333;
+        }
+        section{
+            width: 508px;
+            margin: 100px auto 0;
+        }
+        .frame{
+            border: 4px solid #f00;
+            height: 280px;
+        }
+        .frame p{
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 20px;
+            position: relative;
+        }
+        ul{
+            margin-top: 10px;
+        }
+        ul li{
+            float: left;
+            border: 3px solid #ddd;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        ul li.select{
+            border-color: #ff0;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="frame">
+            <img src="images/slide1.jpg" alt="큰이미지">
+            <p>잠이 안와서 공부하려고 카페에 왔어요. 오렌지 쥬스를 시켰습니다.</p>
+        </div>
+        <ul>
+            <li class="select">
+                <a href="#">
+                    <img src="images/th_slide1.jpg" alt="잠이 안와서 공부하려고 카페에 왔어요. 오렌지 쥬스를 시켰습니다.">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/th_slide2.jpg" alt="친구들하고 모처럼 카페에 모여서 스터디하려고 왔는데 정작 수다만 떨고 있어요.">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/th_slide3.jpg" alt="강의실이 건조해서 목이 너무 아파요. 그래서 귀여운 로봇 가습기를 장만했어요. 너무 너무 너무 너무 너무 너무 너무 너무 귀여워요!!">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/th_slide4.jpg" alt="전선케이블 싫어.">
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        // a를 클릭하면
+        // 1. 큰 이미지 교체
+        // 2. 자막교체
+        // 3. 작은이미지 테두리 교체
+
+        $("a").click(function(){
+            var n = $(this).parent().index() + 1;
+            $(".frame img").attr("src","images/slide"+n+".jpg")
+
+            $(this).parent().addClass("select").siblings().removeClass();
+
+            var ment = $(this).children().attr("alt");
+            $(".frame p").text(ment);
+            var ph = $(".frame p").height() + 40;
+            $(".frame p").css({"top":0}).animate({"top":-ph},300);
+        });
+    </script>
+</body>
+</html>

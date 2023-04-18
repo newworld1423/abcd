@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 640px;
+            margin: 100px auto 0;
+        }
+        ul li{
+            float: left;
+            width: 160px;
+            border-left: 1px solid #ccc;
+            box-sizing: border-box;
+            text-align: center;
+            list-style: none;
+        }
+        ul li:last-child{
+            border-right: 1px solid #ccc;
+        }
+        ul li a{
+            color: #111;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#" data-eng="ABOUT" data-kor="회사소개">회사소개</a></li>
+        <li><a href="#" data-eng="HISTORY" data-kor="회사연혁">회사연혁</a></li>
+        <li><a href="#" data-eng="PRODUCT" data-kor="제품소개">제품소개</a></li>
+        <li><a href="#" data-eng="CONTACT" data-kor="오시는길">오시는길</a></li>
+    </ul>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <script>
+        $("a").hover(
+            function(){
+                var eng = $(this).attr("data-eng");
+                console.log(eng);
+                $(this).text(eng);
+            },
+            function(){
+                var kor = $(this).attr("data-kor");
+                console.log(kor);
+                $(this).text(kor);
+            }
+        );
+
+
+
+        // $("li:nth-child(1) a").hover(
+        //     function(){
+        //         $("li:nth-child(1) a").text("ABOUT");
+        //     },
+        //     function(){
+        //         $("li:nth-child(1) a").text("회사소개");
+        //     }
+        // );
+        // $("li:nth-child(2) a").hover(
+        //     function(){
+        //         $("li:nth-child(2) a").text("HISTORY");
+        //     },
+        //     function(){
+        //         $("li:nth-child(2) a").text("회사연혁");
+        //     }
+        // );
+        // $("li:nth-child(3) a").hover(
+        //     function(){
+        //         $("li:nth-child(3) a").text("PRODUCT");
+        //     },
+        //     function(){
+        //         $("li:nth-child(3) a").text("제품소개");
+        //     }
+        // );
+        // $("li:nth-child(4) a").hover(
+        //     function(){
+        //         $("li:nth-child(4) a").text("CONTACT");
+        //     },
+        //     function(){
+        //         $("li:nth-child(4) a").text("오시는길");
+        //     }
+        // );
+        $
+    </script>
+</body>
+</html>

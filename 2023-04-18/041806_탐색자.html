@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="wrap">
+            <h1>탐색자</h1>
+            <div class="box">
+                <p>현재 요소를 기준으로 탐색할 수 있다.</p>
+                <span>css와 다른점은 상위요소를 선택가능하다.</span>
+            </div>
+            <b>글자를 진하게</b>
+        </div>
+    </section>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <script>
+        $(".box").children("p").css({"background":"#ff0"}); // 자식선택
+        $(".wrap").find("p").css({"font-size":"30px"}); // 자손선택
+        $("p").next().css({"color":"$f00"}); // 다음형제(단수)
+
+        $("h1").parent().css({"text-decoration":"underline"}) //부모선택(단수)
+        $("p").parents(".box").addClass("aaa"); // 조상선택
+        $(".box").prev().addClass("ccc"); // 이전형제(단수)
+        $("b").siblings("h1").addClass("ddd"); // 다른형제들
+        $("div").has("p").addClass("abc");
+    </script>
+</body>
+</html>

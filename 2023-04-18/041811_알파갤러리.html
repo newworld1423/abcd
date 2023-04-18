@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알파갤러리</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #333;
+        }
+        img{
+            vertical-align: top;
+        }
+        .frame{
+            width: 500px;
+            height: 280px;
+            position: relative;
+            margin: 100px auto 0;
+            border: 5px solid #ff0;
+        }
+        .frame img{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <img src="images/slide1.jpg" alt="이미지1">
+        <img src="images/slide2.jpg" alt="이미지2">
+        <img src="images/slide3.jpg" alt="이미지3">
+        <img src="images/slide4.jpg" alt="이미지4">
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        // 맨 뒤 이미지의 투명도가 0이 된 후에
+        // 맨 앞으로 이동해라
+        function slide(){
+            $(".frame img:last-child").animate({"opacity":0},1000,function(){
+                $(this).prependTo(".frame").css({"opacity":1});
+            });
+        }
+
+        var auto = setInterval("slide()",3000);
+
+        $(".frame").hover(
+            function(){
+                clearInterval(auto);
+            },
+            function(){
+                auto = setInterval("slide()",3000);
+            }
+        )
+    </script>
+</body>
+</html>

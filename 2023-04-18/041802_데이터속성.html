@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>데이터속성</h1>
+    <img src="images/slide1.jpg" alt="롤오버이미지" data-on="images/slide2.jpg" data-off="images/slide1.jpg">
+    <img src="images/slide3.jpg" alt="롤오버이미지" data-on="images/slide4.jpg" data-off="images/slide3.jpg">
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        // $("img:nth-of-type(1)").hover( // 이미지에
+        //     function(){ // 마우스를 올리면
+        //         // (img의 src값을) images/slide2.jpg 로 변경되고
+        //         $("img:nth-of-type(1)").attr("src","images/slide2.jpg")
+        //     },
+        //     function(){ // 마우스를 내리면
+        //         // (img의 src값을) images/slide1.jpg로 변경해라
+        //         $("img:nth-of-type(1)").attr("src","images/slide1.jpg")
+        //     }
+        // );
+        // $("img:nth-of-type(2)").hover( // 이미지에
+        //     function(){ // 마우스를 올리면
+        //         // (img의 src값을) images/slide4.jpg 로 변경되고
+        //         $("img:nth-of-type(2)").attr("src","images/slide4.jpg")
+        //     },
+        //     function(){ // 마우스를 내리면
+        //         // (img의 src값을) images/slide3.jpg로 변경해라
+        //         $("img:nth-of-type(2)").attr("src","images/slide3.jpg")
+        //     }
+        // );
+
+        $("img").hover( // (모든) 이미지에
+            function(){ // 마우스를 올리면
+                // (마우스가 올라간) 이미지의 data-on값을 가져와서
+                // (마우스가 올라간) 이미지의 src값을 교체해라
+                var ion = $(this).attr("data-on");
+                $(this).attr("src",ion);
+                console.log(ion);
+            },
+            function(){
+                var ioff = $(this).attr("data-off");
+                $(this).attr("src",ioff);
+                console.log(ioff);
+            }
+        );
+    </script>
+</body>
+</html>

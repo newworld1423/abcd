@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn1">버튼1</button>
+    <button class="btn2">버튼2</button>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        /*
+        $(".btn1").hover(
+            function(){
+                $("body").css({"background":"#ffc"});
+            },
+            function(){
+                $("body").css({"background":"#fff"});
+            }
+        );
+        */
+        $(".btn1").on("mouseover focusin", function(){
+            $("body").css({"background":"#ffc"});
+        });
+
+        $(".btn1").on("mouseleave focusout", function(){
+            $("body").css({"background":"#fff"});
+        });
+
+        // hover는 마우스가 오르고 내리는 대상이 가톡, 커서 적용이 안됨
+        // on은 마우스가 오르고 내리는 대상이 달라도 되고, 커서 적용이 가능
+    </script>
+</body>
+</html>
