@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드배너</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        img{
+            vertical-align: top;
+        }
+        .frame{
+            border: 4px solid #00f;
+            margin: 100px auto 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .frame .slide{
+            position: relative;
+        }
+        .frame .slide li{
+            float: left;
+        }
+        .frame .page{
+            position: absolute;
+            right: 40px;
+            bottom: 20px;
+        }
+        .frame .page li{
+            float: left;
+            width: 30px;
+            line-height: 30px;
+            text-align: center;
+            background: #333;
+            color: #fff;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .frame .page li.select{
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <ul class="slide">
+            <li>
+                <img src="images/pic1.jpg" alt="이미지1">
+            </li>
+            <li>
+                <img src="images/pic2.jpg" alt="이미지2">
+            </li>
+            <li>
+                <img src="images/pic3.jpg" alt="이미지3">
+            </li>
+            <li>
+                <img src="images/pic4.jpg" alt="이미지4">
+            </li>
+            <li>
+                <img src="images/pic5.jpg" alt="이미지5">
+            </li>
+        </ul>
+        <ul class="page"></ul>
+    </div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <script>
+
+        var sec = 4; // 초
+
+        var inum = $(".slide li").length; // li의 개수를 구해라
+
+        var iw = $(".slide img").width(); // 이미지의 너비
+
+        var ih = $(".slide img").height(); // 이미지의 높이
+
+        $(".frame").css({"width":iw, "height":ih}); // .frame의 사이즈
+        $(".slide").css({"width":iw * inum}); // .slide의 전체너비
+
+        for (var i=1; i<=inum; i++) {
+            if (i == 1){
+                $(".page").append("<li class='select'>"+i+"</li>");
+            } else{
+                $(".page").append("<li>"+i+"</li>");
+            }
+        }
+
+        var n = 0; // 움직이는 횟수
+
+        function slide(){
+            n++;
+            if (n >= inum){
+                n = 0;
+            }
+            $(".slide").animate({left:-n*iw},500);
+            console.log(n);
+
+            // $(".page li").removeClass();
+            $(".page li").eq(n).addClass("select").siblings().removeClass();
+        }
+
+        var timer = setInterval("slide()",sec*1000);
+
+        $(".frame").hover(
+            function(){
+                clearInterval(timer);
+            },
+            function(){
+                timer = setInterval("slide()",sec*1000);
+            }
+        );
+
+        $(".page li").click(function(){
+            $(this).addClass("select").siblings().removeClass();
+            n = $(this).index(); // 0 1 2 3
+            $(".slide").animate({left:-n*iw},500);
+
+        });
+    </script>
+</body>
+</html>

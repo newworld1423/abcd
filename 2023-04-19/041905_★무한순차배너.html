@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무한순차배너</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        img{
+            vertical-align: top;
+        }
+        .frame{
+            width: 300px;
+            height: 300px;
+            margin: 100px auto 0;
+            border: 4px solid #f00;
+            overflow: hidden;
+        }
+        .frame ul{
+            width: 1200px;
+            position: relative;
+        }
+        .frame ul li{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <ul class="slide">
+            <li>
+                <img src="images/pic1.jpg" alt="이미지1">
+            </li>
+            <li>
+                <img src="images/pic2.jpg" alt="이미지2">
+            </li>
+            <li>
+                <img src="images/pic3.jpg" alt="이미지3">
+            </li>
+            <li>
+                <img src="images/pic4.jpg" alt="이미지4">
+            </li>
+        </ul>
+    </div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        function slide(){
+            $(".slide").animate({left:-300},500,function(){
+                $(this).append($("li:first-child"));
+                $(this).css({"left":0});
+            });
+        };
+
+        var auto = setInterval("slide()",2000);
+
+        $(".frame").hover(
+            function(){
+                clearInterval(auto);
+            },
+            function(){
+                auto = setInterval("slide()",2000);
+            }
+        );
+    </script>
+</body>
+</html>

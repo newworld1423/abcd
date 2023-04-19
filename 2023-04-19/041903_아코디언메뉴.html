@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아코디언메뉴</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        body{
+            background: #333;
+        }
+        .lnb{
+            width: 180px;
+            margin: 100px auto 0;
+            text-align: center;
+        }
+        .lnb > li > a{
+            line-height: 40px;
+            display: block;
+            background: #006;
+            color: #fff;
+            font-weight: bold;
+        }
+        .lnb ul{
+            display: none;
+        }
+        .lnb li:first-child ul{
+            display: block;
+        }
+        .lnb ul li a{
+            line-height: 40px;
+            display: block;
+            background: #ddd;
+            margin-top: 1px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="lnb">
+        <li>
+            <a href="#">MENU1</a>
+            <ul>
+                <li><a href="#">sub1_1</a></li>
+                <li><a href="#">sub1_2</a></li>
+                <li><a href="#">sub1_3</a></li>
+                <li><a href="#">sub1_4</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">MENU2</a>
+            <ul>
+                <li><a href="#">sub2_1</a></li>
+                <li><a href="#">sub2_2</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">MENU3</a>
+            <ul>
+                <li><a href="#">sub3_1</a></li>
+                <li><a href="#">sub3_2</a></li>
+                <li><a href="#">sub3_3</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        $(".lnb > li > a").click(function(){
+            $(".lnb ul").slideUp(500);
+            $(this).next().stop().slideToggle(500);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드배너연습</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        img{
+            vertical-align: top;
+        }
+        .frame{
+            width: 500px;
+            height: 280px;
+            border: 4px solid #f00;
+            margin: 100px auto 0;
+            position: relative;
+        }
+        .frame .slide{
+            width: 2000px;
+            position: relative;
+        }
+        .frame .slide li{
+            float: left;
+        }
+        .frame .page{
+            position: absolute;
+            bottom: 30px;
+            right: 50%;
+        }
+        .frame .page li{
+            float: left;
+            width: 30px;
+            line-height: 30px;
+            margin-left: 20px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer            ;
+        }
+        .frame .page .select{
+            background: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <ul class="slide">
+            <li>
+                <img src="images/slide1.jpg" alt="이미지1">
+            </li>
+            <li>
+                <img src="images/slide2.jpg" alt="이미지2">
+            </li>
+            <li>
+                <img src="images/slide3.jpg" alt="이미지3">
+            </li>
+            <li>
+                <img src="images/slide4.jpg" alt="이미지4">
+            </li>
+        </ul>
+        <ul class="page">
+            <li class="select">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <script>
+        var n = 0;
+
+        function slide(){
+            n++;
+            if (n >= 4){
+                n = 0;
+            }
+            $(".slide").animate({left:-n*500},500);
+            $(".page li").eq(n).addClass("select").siblings().removeClass();
+        }
+
+        var auto = setInterval("slide()",3000);
+
+        $(".frame").hover(
+            function(){
+                clearInterval(auto)
+            },
+            function(){
+                auto = setInterval("slide()",3000);
+            }
+        );
+
+        $(".page li").click(function(){
+            $(this).addClass("select").siblings().removeClass();
+            n = $(this).index();
+            $(".slide").animate({left:-n*500},500)
+        })
+    </script>
+</body>
+</html>
