@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        header{
+            background: #eee;
+            height: 100px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        header.on{
+            height: 260px;
+        }
+        .wrap{
+            width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        h1{
+            text-align: center;
+            line-height: 60px;
+        }
+        .gnb:after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+        .gnb > li{
+            float: left;
+            width: 200px;
+            line-height: 40px;
+        }
+        .gnb > li:hover > a{
+            background: #fcf;
+        }
+        .gnb > li > a{
+            background: #ffc;
+            display: block;
+            text-align: center;
+        }
+        .gnb ul{
+            background: #cff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <h1>LOGO</h1>
+            <ul class="gnb">
+                <li>
+                    <a href="#">MENU1</a>
+                    <ul>
+                        <li>
+                            <a href="#">sub1_1</a>
+                        </li>
+                        <li>
+                            <a href="#">sub1_2</a>
+                        </li>
+                        <li>
+                            <a href="#">sub1_3</a>
+                        </li>
+                        <li>
+                            <a href="#">sub1_4</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">MENU2</a>
+                    <ul>
+                        <li>
+                            <a href="#">sub2_1</a>
+                        </li>
+                        <li>
+                            <a href="#">sub2_2</a>
+                        </li>
+                        <li>
+                            <a href="#">sub2_3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">MENU3</a>
+                    <ul>
+                        <li>
+                            <a href="#">sub3_1</a>
+                        </li>
+                        <li>
+                            <a href="#">sub3_2</a>
+                        </li>
+                        <li>
+                            <a href="#">sub3_3</a>
+                        </li>
+                        <li>
+                            <a href="#">sub3_4</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">MENU4</a>
+                    <ul>
+                        <li>
+                            <a href="#">sub4_1</a>
+                        </li>
+                        <li>
+                            <a href="#">sub4_2</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        $(".gnb").hover(
+            function(){
+                // $("header").stop().animate({height:260},300)
+                $("header").addClass("on");
+            },
+            function(){
+                // $("header").stop().animate({height:100},300)
+                $("header").removeClass("on");
+            }
+        );
+
+        // $(".gnb > li").hover(
+        //     function(){
+        //         $(this).children("ul").stop().slideDown(300);
+        //     },
+        //     function(){
+        //         $(this).children("ul").stop().slideUp(300);
+        //     }
+        // );
+    </script>
+</body>
+</html>

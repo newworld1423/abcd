@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100%배너2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        #main{
+            height: 600px;
+            position: relative;
+        }
+        .slide{
+            position: relative;
+            width: 500%;
+        }
+        .slide li{
+            float: left;
+            height: 600px;
+            width: 20%;
+        }
+        .slide li.img1{
+            background: url(images/slide1.jpg) no-repeat center/cover;
+        }
+        .slide li.img2{
+            background: url(images/slide2.jpg) no-repeat center/cover;
+        }
+        .slide li.img3{
+            background: url(images/slide3.jpg) no-repeat center/cover;
+        }
+        .slide li.img4{
+            background: url(images/slide4.jpg) no-repeat center/cover;
+        }
+        .page{
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+        .page li{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            margin: 0 4px;
+            background: #ccc;
+            text-indent: -50px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .page li.select{
+            background: #f00;
+        }
+        #main > a{
+            position: absolute;
+            width: 60px;
+            line-height: 60px;
+            text-align: center;
+            text-decoration: none;
+            background: #000;
+            color: #fff;
+            top: calc(50% - 30px);
+            z-index: 10;
+        }
+        #main .prev{
+            left: 0;
+        }
+        #main .next{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <section id="main">
+        <ul class="slide">
+            <li class="img1"></li>
+            <li class="img2"></li>
+            <li class="img3"></li>
+            <li class="img4"></li>
+        </ul>
+        <ul class="page">
+            <li class="select">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <a href="#" class="prev">이전</a>
+        <a href="#" class="next">다음</a>
+    </section>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        var inum = $(".slide li").length; // 4
+        $(".slide").append($(".slide li:first-child").clone());
+
+        $(".slide").css({"width":(inum+1) * 100 + "%"});
+        $(".slide li").css({"width":100 / (inum+1) + "%"})
+
+        for (var i=1; i<=inum; i++) {
+            if (i == 1) {
+                $(".page").append("<li class='select'"+i+"</li>");
+            } else {
+                $(".page").append("<li>"+i+"</li>");
+            }
+        }
+
+        var n = 0;
+
+        function auto(){
+            n++;
+            if (n >= 4){
+                $(".slide").animate({"left":-n*100+"%"},500,function(){
+                    $(this).css({"left":0});
+                });
+                n = 0;
+            } else {
+                $(".slide").animate({"left":-n*100+"%"},500);
+            }
+            $(".page li").eq(n).addClass("select").siblings().removeClass();
+        };
+
+        var timer = setInterval("auto()",3000);
+
+        $("#main").hover(
+            function(){
+                clearInterval(timer)
+            },
+            function(){
+                timer = setInterval("auto()",3000);
+            }
+        );
+
+        $(".next").click(function(){
+            auto();
+        });
+        $(".prev").click(function(){
+            n--;
+            if (n < 0) {
+                n = 3;
+                $(".slide").css({"left":-(n+1)*100+"%"}).animate({left:-n*100+"%"},500);
+            } else {
+                $(".slide").animate({"left":-n*100+"%"},500)
+            }
+            $(".page li").eq(n).addClass("select").siblings().removeClass();
+        });
+    </script>
+</body>
+</html>
