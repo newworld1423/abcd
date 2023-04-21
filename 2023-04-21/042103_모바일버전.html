@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일버전</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: #f00;
+            transition: 0.5s;
+        }
+        div.on{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">box</div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        var bw = $(window).width();
+        $(window).resize(function(){
+            bw = $(window).width();
+        });
+
+        $(".box").click(function(){
+            if (bw > 800) { // 바디너비가 800이상이면
+                $(this).addClass("on");
+            }
+        });
+    </script>
+</body>
+</html>

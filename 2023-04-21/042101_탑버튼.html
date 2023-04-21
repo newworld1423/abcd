@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탑버튼</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            position: fixed;
+            width: 100%;
+            background: #ccc;
+            line-height: 50px;
+        }
+        ul li{
+            display: inline-block;
+            list-style: none;
+        }
+        ul li a{
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+        #cont1{
+            background: #ffc;
+            height: 2000px;
+        }
+        #cont2{
+            background: #fcf;
+            height: 1600px;
+        }
+        #cont3{
+            background: #cff;
+            height: 3200px;
+        }
+        #cont4{
+            background: #cfc;
+            height: 300px;
+        }
+        aside{
+            width: 60px;
+            line-height: 60px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+        }
+        aside a{
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#">메뉴1</a>
+        </li>
+        <li>
+            <a href="#">메뉴2</a>
+        </li>
+        <li>
+            <a href="#">메뉴3</a>
+        </li>
+        <li>
+            <a href="#">메뉴4</a>
+        </li>
+    </ul>
+    <!-- <ul>
+        <li>
+            <a href="#" data-top="0">메뉴1</a>
+        </li>
+        <li>
+            <a href="#" data-top="2000">메뉴2</a>
+        </li>
+        <li>
+            <a href="#" data-top="3600">메뉴3</a>
+        </li>
+        <li>
+            <a href="#" data-top="6800">메뉴4</a>
+        </li>
+    </ul> -->
+    <div id="cont1">
+        <h2>콘텐츠1 영역</h2>
+    </div>
+    <div id="cont2">
+        <h2>콘텐츠2 영역</h2>
+    </div>
+    <div id="cont3">
+        <h2>콘텐츠3 영역</h2>
+    </div>
+    <div id="cont4">
+        <h2>콘텐츠4 영역</h2>
+    </div>
+    <aside>
+        <a href="#none">TOP</a>
+    </aside>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <script>
+        $("aside a").click(function(){
+            $("html").animate({scrollTop:0},500);
+            return false;
+        });
+
+        $("ul li a").click(function(){
+            var cn = $(this).parent().index() + 1; // 1 2 3 4
+            var st = $("#cont"+cn).offset().top;
+            console.log(st);
+            $("html").animate({scrollTop:st},500);
+            return false;
+        });
+
+        // $("ul li a").click(function(){
+        //     var st = $(this).attr("data-top");
+        //     $("html").animate({scrollTop:st},500);
+        //     return false;
+        // });
+    </script>
+</body>
+</html>

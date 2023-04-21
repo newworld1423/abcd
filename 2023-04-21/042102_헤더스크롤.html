@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더스크롤</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* body{
+            transition: 0.5s;
+        }
+        body.bl{
+            background: #000;
+        } */
+        header{
+            height: 100px;
+            position: fixed;
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+            transition: 0.3s;
+        }
+        header.on{
+            background: #fff;
+        }
+        header ul{
+            text-align: center;
+            line-height: 100px;
+        }
+        header ul li{
+            display: inline-block;
+            list-style: none;
+        }
+        header ul li a{
+            color: inherit;
+        }
+        div{
+            background: #fcf;
+            height: 3000px;
+            /* width: 500px; */
+        }
+        aside{
+            width: 100px;
+            height: 300px;
+            background: #cff;
+            position: absolute;
+            left: calc(50% + 640px);
+            top: 200px;
+        }
+        aside.fix{
+            position: fixed;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+                <a href="#">menu1</a>
+            </li>
+            <li>
+                <a href="#">menu2</a>
+            </li>
+            <li>
+                <a href="#">menu3</a>
+            </li>
+            <li>
+                <a href="#">menu4</a>
+            </li>
+        </ul>
+    </header>
+    <div></div>
+    <aside>퀵메뉴</aside>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <script>
+        // 스크롤을 땡겼을때
+        // 스크롤탑값이 1이상이면
+        // header .on을 추가해라
+        // 그게 아니라면
+        // header .on을 제거해라
+
+        $(window).scroll(function(){
+            var st = $(this).scrollTop();
+            if (st > 0) {
+                $("header").addClass("on");
+            } else {
+                $("header").removeClass();
+            }
+            if (st >= 100) { // 현재 탑 200 - 최종 100
+                $("aside").addClass("fix");
+            } else {
+                $("aside").removeClass("fix");
+        }
+        });
+
+        //     if (st > 1500) {
+        //         $("body").addClass("bl");
+        //     } else {
+        //         $("body").removeClass();
+        //     }
+        // });
+
+
+
+    </script>
+</body>
+</html>

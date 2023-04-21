@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ksnet</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            position: absolute;
+            width: 100%;
+            top: 50px;
+        }
+        header.fix{
+            position: fixed;
+            top: 0;
+        }
+        header .box{
+            background: #fff;
+            width: 1200px;
+            margin: 0 auto;
+            transition: 0.3s;
+        }
+        header.fix .box{
+            width: 100%;
+        }
+        /* header .box.wide{
+            width: 100%;
+        } */
+        header .box .wrap{
+            width: 980px;
+            margin: 0 auto;
+            background: #fcf;
+        }
+        .cont{
+            height: 3000px;
+            background: #ffc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="box">
+            <div class="wrap">
+                <h1>헤더내용</h1>
+            </div>
+        </div>
+    </header>
+    <div class="cont"></div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        $(window).scroll(function(){
+            var st = $(this).scrollTop();
+            if (st >= 50) {
+                $("header").addClass("fix");
+                // $("header .box").addClass("wide");
+            } else {
+                $("header").removeClass("fix");
+                // $("header .box").removeClass("wide");
+            }
+        })
+    </script>
+</body>
+</html>

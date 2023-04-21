@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOS</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            height: 2000px;
+        }
+        .cont2{
+            background: #ffc;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont1">
+        <h1 data-aos="fade-right" data-aos-easing="linear">AOS를 이용한 애니메이션</h1>
+    </div>
+    <div class="cont2">
+        <p data-aos="fade-up" data-aos-duration="3000">스크롤탑이 일정하게 도달되면 애니메이션이 실행된다.</p>
+    </div>
+    <div class="cont2">
+        <p>스크롤탑이 일정하게 도달되면 애니메이션이 실행된다.</p>
+    </div>
+    <div class="cont2">
+        <p>스크롤탑이 일정하게 도달되면 애니메이션이 실행된다.</p>
+    </div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>
