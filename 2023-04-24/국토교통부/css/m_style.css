@@ -1,0 +1,60 @@
+/* 모바일용 */
+@media (max-width:800px) {
+    .pc{
+        display: none !important;
+    }
+    header{
+        background: none;
+    }
+    header .up{
+        border-bottom: 1px solid #ddd;
+    }
+    header .up .wrap{
+        height: 27px;
+        width: 94.44444444444444%;
+    }
+    header .up .wrap .text p{
+        font-size: 13px;
+    }
+    header .down .wrap{
+        height: 69px;
+        width: 94.44444444444444%;
+        display: block;
+    }
+    header .down .wrap h1{
+        padding: 12px 0;
+        width: 200px;
+        background: url(../images/bg_season_mo.png) no-repeat left bottom/contain;
+        display: inline-block;
+    }
+    header .down .wrap h1 a img{
+        height: 44px;
+    }
+    header .down .wrap .button{
+        display: inline-block;
+    }
+    header .down .wrap .button a{
+        width: 40px;
+        height: 40px;
+        background: #ecf1f4;
+        border-radius: 100%;
+        display: inline-block;
+        text-align: center;
+    }
+    header .down .wrap .button .site:link, header .down .wrap .button .site:visited{
+        width: 40px;
+        height: 40px;
+        background: #ecf1f4 url(../images/sitemap.png) no-repeat center;
+    }
+    header .down .wrap .button .site:hover, header .down .wrap .button .site:active, header .down .wrap .button .site:focus{
+        background: #325baf url(../images/sitemap_on.png) no-repeat center;
+        color: #fff;
+    }
+}
+
+/* PC용 */
+@media (min-width:801px) {
+    .mob{
+        display: none !important;
+    }
+}
