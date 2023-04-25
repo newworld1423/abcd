@@ -1,0 +1,152 @@
+/* 모바일용 */
+@media (max-width:800px) {
+    .pc{
+        display: none !important;
+    }
+    header{
+        background: none;
+    }
+    header .up{
+        border-bottom: 1px solid #ddd;
+    }
+    header .up .wrap{
+        height: 27px;
+        width: 94.44444444444444%;
+    }
+    header .up .wrap .text p{
+        font-size: 13px;
+    }
+    header .up .wrap .center{
+        position: absolute;
+        top: 106px;
+        left: -10px;
+        background: rgba(0,0,0,0.8);
+        width: calc(100% + 20px);
+        height: 140px;
+        padding: 50px 0;
+        display: none;
+    }
+    header .up .wrap .center .search{
+        width: 310px;
+        border-radius: 0;
+        text-align: left;
+        margin: 0 auto;
+        display: block;
+        background: #fff;
+    }
+    header .up .wrap .center .search select{
+        padding: 0 16px 0;
+    }
+    header .up .wrap .center .search input{
+        padding: 0 0 0 10px;
+        width: 165px;
+    }
+    header .up .wrap .center .search button{
+        position: static;
+        background: #006bb7;
+        width: 45px;
+        height: 36px;
+    }
+    header .up .wrap .center .search button p{
+        color: #fff;
+        font-weight: bold;
+    }
+    header .up .wrap nav{
+        background: #333842;
+        position: absolute;
+        top: 0;
+        right: -10px;
+        width: 314px;
+        z-index: 9999;
+    }
+    header .up .wrap nav .mob{
+        text-align: center;
+        position: relative;
+    }
+    header .up .wrap nav .mob .logo img{
+        height: 36px;
+        margin-top: 30px;
+    }
+    header .up .wrap nav .mob .close{
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+    header .up .wrap nav ul{
+        float: none;
+    }
+    header .up .wrap nav .snb{
+        margin-right: 0;
+        padding-top: 4px;
+    }
+    header .up .wrap nav .snb li{
+        float: left;
+        font-size: 13px;
+        color: #777;
+        font-weight: 500;
+    }
+    header .up .wrap nav .snb li:after{
+        content: '|';
+        margin: 0 8px 0 6px;
+        font-size: 10px;
+        font-weight: 100;
+        position: relative;
+        top: -2px;
+    }
+    header .up .wrap nav .snb li:last-child:after{
+        display: none;
+    }
+    header .up .wrap nav .snb li a img{
+        padding-top: 3px;
+        margin-right: 5px;
+    }
+    header .up .wrap nav .sns li{
+        float: left;
+        margin-right: 9px;
+    }
+    header .up .wrap nav .sns li:last-child{
+        margin-right: 0;
+    }
+    header .down .wrap{
+        height: 69px;
+        width: 94.44444444444444%;
+        display: flex;
+    }
+    header .down .wrap h1{
+        padding: 12px 0;
+        width: 200px;
+        background: url(../images/bg_season_mo.png) no-repeat left bottom/contain;
+        display: inline-block;
+    }
+    header .down .wrap h1 a img{
+        height: 44px;
+    }
+    header .down .wrap .button{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90px;
+    }
+    header .down .wrap .button a{
+        width: 40px;
+        height: 40px;
+        background: #ecf1f4;
+        border-radius: 100%;
+        text-align: center;
+    }
+    header .down .wrap .button a img{
+        margin-top: 8px;
+    }
+    header .down .wrap .button .site:link, header .down .wrap .button .site:visited{
+        width: 40px;
+        height: 40px;
+        margin-top: 0;
+    }
+}
+
+/* PC용 */
+@media (min-width:801px) {
+    .mob{
+        display: none !important;
+    }
+}
