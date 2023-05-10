@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퍼블리셔 이력서 - 서승준</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/m_style.css">
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <h1>
+                <a href="index.html"></a>
+            </h1>
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <a href="#intro">Introduce</a>
+                    </li>
+                    <li>
+                        <a href="#skill">Skill</a>
+                    </li>
+                    <li>
+                        <a href="#port">Portfolio</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="btn_nav mob">
+                <a href="#">
+                    <div class="fir"></div>
+                    <div class="sec"></div>
+                    <div class="thi"></div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="blank"></div>
+    <section id="intro">
+        <h2 class="blind">자기소개영역</h2>
+        <div class="wrap">
+            <div class="abme">
+                <div class="pub"></div>
+                <h3>웹 퍼블리셔를 꿈꾸다</h3>
+                <p>웹 퍼블리셔를 꿈꾸고 있는 서승준입니다.</p>
+            </div>
+        </div>
+    </section>
+    <section id="skill">
+        <h2 class="blind">기술소개영역</h2>
+        <div class="warp"></div>
+    </section>
+    <section id="port">
+        <h2 class="blind">작업물소개영역</h2>
+    </section>
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <script>
+        //헤더 로고 호버 기능
+        $("header .wrap h1 a").hover(function(){
+            $(this).css({"background":"url(../images/monetization_on_pc_hover.svg) no-repeat center"});
+        },function(){
+            $(this).css({"background":"url(../images/monetization_on_pc.svg) no-repeat center"});
+        });
+
+        //헤더 햄버거버튼 애니메이션 기능
+        var btn = 0;
+
+        $("header .wrap .btn_nav a").on("click", function(){
+            if(btn == 0) {
+                $(this).children(".sec").css({"display":"none"});
+                $(this).children(".fir").css({"transform":"rotate(45deg)","top":"5px"});
+                $(this).children(".thi").css({"transform":"rotate(135deg)","top":"-7px"});
+                $("header .wrap nav").stop().slideToggle("fast");
+                btn = 1;
+            } else {
+                $(this).children(".sec").css({"display":"block"});
+                $(this).children(".fir").css({"transform":"none","top":"0"});
+                $(this).children(".thi").css({"transform":"none","top":"0"});
+                $("header .wrap nav").stop().slideToggle("fast");
+                btn = 0;
+            }
+        });
+    </script>
+</body>
+</html>

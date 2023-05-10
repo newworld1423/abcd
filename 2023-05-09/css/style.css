@@ -1,0 +1,98 @@
+/* web font */
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+img{
+    vertical-align: top;
+}
+
+/* common */
+body{
+    font-family: 'Noto Sans KR';
+    line-height: 1.6;
+    color: #010;
+    font-size: 16px;
+}
+.wrap{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+.wrap:after, ul:after, .cl:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.blind{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    position: absolute;
+    left: -9999px;
+}
+
+/* header */
+header{
+    border-bottom: 2px solid #010;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+}
+header .wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 108px;
+}
+header .wrap:after{
+    display: none;
+}
+header .wrap h1 a{
+    background: url(../images/monetization_on_pc.svg) no-repeat center;
+    width: 92px;
+    height: 72px;
+    display: block;
+}
+header .wrap .gnb ul{
+    display: flex;
+}
+header .wrap .gnb ul li{
+    margin-left: 100px;
+}
+header .wrap .gnb ul li a{
+    font-weight: bold;
+    font-size: 20px;
+}
+header .wrap .gnb ul li a:hover{
+    color: #1a5e9a;
+}
+
+.blank{
+    height: 108px;
+}
+#intro{
+    height: 861px;
+    background: #ffc;
+}
+#skill{
+    height: 861px;
+    background: #fcc;
+}
+#port{
+    height: 861px;
+    background: #fcf;
+}
