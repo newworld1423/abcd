@@ -1,0 +1,185 @@
+/* web font */
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+img{
+    vertical-align: top;
+}
+
+/* common */
+body{
+    font-family: 'Noto Sans KR';
+    line-height: 1.6;
+    color: #010;
+    font-size: 16px;
+}
+.wrap{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+.wrap:after, ul:after, .cl:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.blind{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    position: absolute;
+    left: -9999px;
+}
+
+/* header */
+header{
+    border-bottom: 2px solid #010;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+}
+header .wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 108px;
+}
+header .wrap:after{
+    display: none;
+}
+header .wrap h1 a{
+    background: url(../images/monetization_on_pc.svg) no-repeat center;
+    width: 92px;
+    height: 72px;
+    display: block;
+}
+header .wrap .gnb ul{
+    display: flex;
+}
+header .wrap .gnb ul li{
+    margin-left: 100px;
+}
+header .wrap .gnb ul li a{
+    font-weight: bold;
+    font-size: 20px;
+}
+header .wrap .gnb ul li a:hover{
+    color: #1a5e9a;
+}
+
+.blank{
+    height: 108px;
+}
+#intro{
+    height: 861px;
+    padding: 60px 0;
+}
+#intro .wrap .abme{
+    margin-bottom: 40px;
+}
+#intro .wrap .abme .pub{
+    width: 120px;
+    height: 120px;
+    background: url(../images/technologist.png) no-repeat center;
+    display: inline-block;
+}
+#intro .wrap .abme h3{
+    display: inline-block;
+    font-size: 36px;
+    position: relative;
+    top: -10px;
+    margin-left: 20px;
+}
+#intro .wrap .abme p{
+    margin-top: 20px;
+}
+#intro .wrap .intro{
+    margin-bottom: 40px;
+}
+#intro .wrap .intro h3{
+    font-size: 18px;
+}
+#intro .wrap .cota h3{
+    font-size: 18px;
+}
+#tech{
+    height: 861px;
+    padding: 60px 0;
+    background: #ddd;
+}
+#tech .wrap h3{
+    font-size: 36px;
+}
+#tech .wrap ul li{
+    margin-top: 20px;
+}
+#tech .wrap ul li:first-child{
+    margin-top: 40px;
+}
+#tech .wrap ul li .list{
+    font-size: 24px;
+    font-weight: bold;
+}
+#tech .wrap ul li .list:hover{
+    color: #1a5e9a;
+}
+#tech .wrap ul li .abso{
+    display: flex;
+    align-items: end;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    opacity: 1;
+}
+#tech .wrap ul li .abso div{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+#tech .wrap ul li .abso div:last-child{
+    margin-right: 0;
+}
+#tech .wrap ul li .abso div .html{
+    width: 100px;
+    line-height: 100px;
+    display: block;
+    border: 2px solid #1a5e9a;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#tech .wrap ul li .abso div .html:first-child{
+    margin-top: 0;
+}
+#tech .wrap ul li .abso div .html:hover{
+    background: #1a5e9a;
+    color: #fef;
+}
+#port{
+    height: 861px;
+    background: #fcf;
+}
+#port a{
+    width: 100px;
+    height: 100px;
+    display: block;
+    background: #000;
+}

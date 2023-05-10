@@ -1,0 +1,67 @@
+/* 모바일용 */
+@media (max-width:800px) {
+    .pc{
+        display: none !important;
+    }
+    .wrap{
+        width: 100%;
+        max-width: 800px;
+        padding: 0 20px;
+    }
+
+    /* header */
+    header .wrap{
+        height: 75px;
+    }
+    header .wrap:after{
+        display: none;
+    }
+    header .wrap h1 a{
+        background: url(../images/monetization_on_mob.svg) no-repeat center;
+        width: 64px;
+        height: 50px;
+    }
+    header .wrap .gnb{
+        display: none;
+    }
+    header .wrap .gnb ul{
+        flex-direction: column;
+        position: absolute;
+        top: 77px;
+        left: -240px;
+        width: calc(100% + 480px);
+        background: #fff;
+    }
+    header .wrap .gnb ul li{
+        margin-left: 0;
+        border-bottom: 2px solid #010;
+    }
+    header .wrap .gnb ul li a{
+        font-size: 18px;
+        line-height: 75px;
+        display: block;
+        text-align: center;
+    }
+    header .wrap .btn_nav a div{
+        width: 40px;
+        height: 6px;
+        background: #0769ad;
+        margin-bottom: 6px;
+        position: relative;
+    }
+    header .wrap .btn_nav a div:last-child{
+        margin-bottom: 0;
+    }
+
+    .blank{
+        height: 75px;
+    }
+
+}
+
+/* PC용 */
+@media (min-width:801px) {
+    .mob{
+        display: none !important;
+    }
+}
