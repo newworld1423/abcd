@@ -1,0 +1,178 @@
+/* 모바일용 */
+@media (max-width:800px) {
+    .pc{
+        display: none !important;
+    }
+    .wrap{
+        width: 100%;
+        max-width: 800px;
+        padding: 0 20px;
+    }
+
+    /* header */
+    header .wrap{
+        height: 75px;
+    }
+    header .wrap:after{
+        display: none;
+    }
+    header .wrap h1 a{
+        background: url(../images/monetization_on_mob.svg) no-repeat center;
+        width: 64px;
+        height: 50px;
+    }
+    header .wrap .gnb{
+        display: none;
+    }
+    header .wrap .gnb ul{
+        flex-direction: column;
+        position: absolute;
+        top: -154px;
+        left: -240px;
+        width: calc(100% + 480px);
+        background: #fff;
+    }
+    header .wrap .gnb ul li{
+        margin-left: 0;
+        border-bottom: 2px solid #000;
+    }
+    header .wrap .gnb ul li a{
+        font-size: 18px;
+        line-height: 75px;
+        display: block;
+        text-align: center;
+    }
+    header .wrap .btn_nav a div{
+        width: 40px;
+        height: 6px;
+        background: #0769ad;
+        margin-bottom: 6px;
+        position: relative;
+    }
+    header .wrap .btn_nav a div:last-child{
+        margin-bottom: 0;
+    }
+
+    .blank{
+        height: 75px;
+    }
+
+    #intro{
+        height: auto;
+        padding: 20px 0;
+    }
+    #intro .wrap .abme{
+        margin-bottom: 20px;
+    }
+    #intro .wrap .abme .pub{
+        display: block;
+    }
+    #intro .wrap .abme h3{
+        display: block;
+        font-size: 24px;
+        top: 0;
+        margin-left: 0;
+    }
+    #intro .wrap .abme p{
+        margin-top: 10px;
+    }
+    #intro .wrap .intro{
+        margin-bottom: 20px;
+    }
+    #intro .wrap .intro .block{
+        flex-flow: wrap;
+        margin-bottom: 0;
+        justify-content: space-around;
+    }
+    #intro .wrap .intro .block .menu{
+        width: 150px;
+        margin-bottom: 10px;
+    }
+    #intro .wrap .intro .block .none{
+        left: -320px;
+        height: 554px;
+    }
+    #intro .wrap .intro .block .none:first-of-type{
+        background: url(../images/web_standard_mob.jpg) no-repeat center/cover;
+    }
+    #intro .wrap .intro .block .none:nth-of-type(2){
+        background: url(../images/semantics_mob.jpg) no-repeat center/cover;
+    }
+
+    #tech{
+        height: auto;
+        padding: 30px 0;
+    }
+    #tech .wrap h3{
+        font-size: 24px;
+    }
+    #tech .wrap ul li{
+        margin-top: 10px;
+    }
+    #tech .wrap ul li:first-child{
+        margin-top: 20px;
+    }
+    #tech .wrap ul li .list{
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    #tech .wrap ul li .list:hover{
+        color: #1a5e9a;
+    }
+    #tech .wrap ul li .abso{
+        display: flex;
+        align-items: end;
+        position: absolute;
+        top: 8px;
+        right: 25%;
+        transform: translateX(25%);
+        opacity: 1;
+    }
+    #tech .wrap ul li .none{
+        display: none;
+    }
+    #tech .wrap ul li .abso div{
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+    #tech .wrap ul li .abso div:last-child{
+        margin-right: 0;
+    }
+    #tech .wrap ul li .abso div a{
+        display: block;
+        border: 2px solid #1a5e9a;
+        text-align: center;
+        margin-top: 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        transition: 0.3s;
+        font-size: 12px;
+    }
+    #tech .wrap ul li .abso div a:hover{
+        background: #1a5e9a;
+        color: #fff;
+    }
+    #tech .wrap ul li .abso div .html{
+        width: 100px;
+        line-height: 100px;
+    }
+    #tech .wrap ul li .abso div .html:first-child{
+        margin-top: 0;
+    }
+    #tech .wrap ul li .abso div .css{
+        width: 120px;
+        line-height: 80px;
+    }
+    #tech .wrap ul li .abso div .css:first-child{
+        margin-top: 10px;
+    }
+}
+
+/* PC용 */
+@media (min-width:801px) {
+    .mob{
+        display: none !important;
+    }
+}
