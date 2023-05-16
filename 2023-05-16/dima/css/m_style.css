@@ -1,0 +1,236 @@
+/* 모바일용 */
+@media (max-width:800px) {
+    .pc{
+        display: none !important;
+    }
+
+    /* header */
+    header{
+        width: 100%;
+        height: 70px;
+        padding: 0 15px;
+    }
+    header .wrap h1 a img{
+        width: 185px;
+    }
+    header .wrap .snb{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    header .wrap .snb .sel{
+        position: relative;
+    }
+    header .wrap .snb .sel select{
+        display: none;
+    }
+    header .wrap .snb .sel ul{
+        position: absolute;
+        top: 30px;
+        width: 100%;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        opacity: 0;
+        display: none;
+    }
+    header .wrap .snb .sel ul li a{
+        line-height: 50px;
+        font-size: 18px;
+        font-weight: 400;
+        display: block;
+        background: #fff;
+        padding-left: 20px;
+    }
+    header .wrap .snb button{
+        margin-left: 20px;
+        padding: 0;
+    }
+    header .wrap .snb .sear_btn{
+        width: 24px;
+        height: 24px;
+    }
+    header .wrap .snb .sear{
+        width: calc(100% + 30px);
+        height: 200px;
+        top: 70px;
+        left: -15px;
+        opacity: 0;
+    }
+    header .wrap .snb .sear div .form form input{
+        width: 320px;
+        height: 40px;
+        border-radius: 20px;
+        padding-left: 20px;
+        margin-left: 5px;
+    }
+    header .wrap .snb .sear div .form form button{
+        position: absolute;
+        top: 5px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+    }
+    header .wrap .snb .sear div .form .close{
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+    }
+    header .wrap .snb .sear div .tag{
+        margin-top: 10px;
+        margin-right: 40px;
+    }
+    header .wrap .snb .sear div .tag a{
+        font-size: 12px;
+    }
+    header .wrap .snb .sns_btn{
+        width: 20px;
+        height: 20px;
+    }
+    header .wrap .snb .sns{
+        position: absolute;
+        top: 70px;
+        right: 35px;
+        opacity: 0;
+    }
+    header .wrap .snb .sns a{
+        width: 50px;
+        height: 40px;
+    }
+    header .wrap .snb .sns a img{
+        width: 20px;
+        height: 20px;
+    }
+    header .wrap .snb .menu_btn{
+        background: url(../images/menu.png) no-repeat center/cover;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        right: -4px;
+    }
+    header .menu{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background: #141426;
+        z-index: 10000;
+        color: #fff;
+        overflow: auto;
+    }
+    header .menu .lang{
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .menu .lang ul{
+        display: flex;
+    }
+    header .menu .lang ul li{
+        margin-right: 5px;
+    }
+    header .menu .lang ul li a{
+        padding: 5px 10px;
+        border: 1px solid #fff;
+        font-size: 14px;
+        border-radius: 12px;
+        display: block;
+        opacity: 0.7;
+    }
+    header .menu .lang button{
+        border: none;
+        background: url(../images/close.png) no-repeat center;
+        width: 20px;
+        height: 20px;
+    }
+    header .menu .quick{
+        /* margin-top: 20px; */
+        font-size: 14px;
+        position: relative;
+    }
+    header .menu .quick .dep_u1{
+        display: flex;
+        text-align: center;
+    }
+    header .menu .quick .dep_u1:after{
+        display: none;
+    }
+    header .menu .quick .dep_u1 .dep_l1{
+        width: 100%;
+    }
+    header .menu .quick .dep_u1 .dep_l1 .dep_a1{
+        opacity: 0.3;
+        padding: 10px 0;
+        display: block;
+    }
+    header .menu .quick .dep_u1 .active .dep_a1{
+        opacity: 1;
+        border-bottom: 2px solid #ec268f;
+    }
+    header .menu .quick .dep_u1 .dep_l1 .dep_u2{
+        position: absolute;
+        top: 35px;
+        left: 0;
+        display: none;
+        flex-wrap: wrap;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+    header .menu .quick .dep_u1 .active .dep_u2{
+        display: flex;
+        width: 100%;
+    }
+    header .menu .quick .dep_u1 .dep_l1 .dep_u2 .dep_l2{
+        width: 33.333333%;
+    }
+    header .menu .quick .dep_u1 .dep_l1 .dep_u2 .dep_l2 .dep_a2{
+        display: block;
+        padding: 15px 0;
+        height: 45px;
+        border-top: 1px solid rgba(255,255,255,0.3);
+        border-right: 1px solid rgba(255,255,255,0.3);
+    }
+    header .menu .nav{
+        width: 100%;
+        position: absolute;
+        top: 256px;
+    }
+    header .menu .nav .arrow{
+        background: url(../images/expand_more.png) no-repeat right 15px center;
+    }
+    header .menu .nav .arrow_c{
+        background: url(../images/contract_more.png) no-repeat right 15px center;
+    }
+    header .menu .nav .dep_u1 .dep_l1{
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+    header .menu .nav .dep_u1 .dep_l1 .dep_a1{
+        padding: 15px;
+        display: block;
+    }
+    header .menu .nav .dep_u1 .dep_l1 .dep_u2{
+        display: none;
+    }
+    header .menu .nav .dep_u1 .dep_l1 .dep_u2 .dep_l2 .dep_a2{
+        padding: 10px 15px 10px 35px;
+        display: block;
+        font-size: 14px;
+        opacity: 0.7;
+    }
+    header .menu .nav .dep_u1 .dep_l1 .dep_u2 .dep_l2 .dep_u3{
+        display: none;
+    }
+    header .menu .nav .dep_u1 .dep_l1 .dep_u2 .dep_l2 .dep_u3 .dep_l3 .dep_a3{
+        padding: 10px 20px 10px 50px;
+        display: block;
+        font-size: 12px;
+        opacity: 0.8;
+    }
+}
+
+/* PC용 */
+@media (min-width:801px) {
+    .mob{
+        display: none !important;
+    }
+}
