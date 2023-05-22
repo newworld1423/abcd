@@ -1,0 +1,186 @@
+/* 모바일용 */
+@media (max-width:800px) {
+    .pc{
+        display: none !important;
+    }
+    .wrap{
+        width: 100%;
+        max-width: 800px;
+        padding: 0 20px;
+    }
+
+    /* header */
+    header .wrap{
+        height: 75px;
+    }
+    header .wrap:after{
+        display: none;
+    }
+    header .wrap h1 a{
+        background: url(../images/monetization_on_mob.svg) no-repeat center;
+        width: 64px;
+        height: 50px;
+    }
+    header .wrap .gnb{
+        display: none;
+    }
+    header .wrap .gnb ul{
+        flex-direction: column;
+        position: absolute;
+        top: -154px;
+        left: -240px;
+        width: calc(100% + 480px);
+        background: #fff;
+    }
+    header .wrap .gnb ul li{
+        margin-left: 0;
+        border-bottom: 2px solid #000;
+    }
+    header .wrap .gnb ul li a{
+        font-size: 18px;
+        line-height: 75px;
+        display: block;
+        text-align: center;
+    }    
+    header .wrap .btn_nav button div{
+        width: 40px;
+        height: 6px;
+        background: #0769ad;
+        margin-bottom: 6px;
+        position: relative;
+    }
+    header .wrap .btn_nav button div:last-child{
+        margin-bottom: 0;
+    }
+
+    .blank{
+        height: 75px;
+    }
+
+    #intro{
+        height: auto;
+        padding: 20px 0;
+    }
+    #intro .wrap .abme{
+        margin-bottom: 20px;
+    }
+    #intro .wrap .abme .pub{
+        display: block;
+    }
+    #intro .wrap .abme h3{
+        display: block;
+        font-size: 24px;
+        top: 0;
+        margin-left: 0;
+    }
+    #intro .wrap .abme p{
+        margin-top: 10px;
+    }
+    #intro .wrap .intro{
+        margin-bottom: 20px;
+    }
+    #intro .wrap .intro .block{
+        flex-flow: wrap;
+        margin-bottom: 0;
+        justify-content: space-around;
+    }
+    #intro .wrap .intro .block .menu{
+        width: 150px;
+        margin-bottom: 10px;
+    }
+    #intro .wrap .intro .block .none{
+        left: -320px;
+        height: 554px;
+    }
+    #intro .wrap .intro .block .none:first-of-type{
+        background: url(../images/web_standard_mob.jpg) no-repeat center/cover;
+    }
+    #intro .wrap .intro .block .none:nth-of-type(2){
+        background: url(../images/semantics_mob.jpg) no-repeat center/cover;
+    }
+
+    #tech{
+        height: auto;
+        padding: 20px 0;
+    }
+    #tech .wrap{
+        height: 500px;
+    }
+    #tech .wrap h3{
+        font-size: 24px;
+    }
+    #tech .wrap ul{
+        margin-top: 12px;
+    }
+    #tech .wrap ul li .list{
+        font-size: 16px;
+        padding-right: 6px;
+    }
+    #tech .wrap ul li .abso{        
+        justify-content: start;
+        align-items: start;        
+        top: 60px;                
+        flex-wrap: wrap;
+    }    
+    #tech .wrap ul li .abso .mob{
+        margin-right: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 20px;
+        height: 412px;
+        overflow: scroll;
+    }
+    #tech .wrap ul li .abso .mob button{
+        width: 21.09375%;        
+        margin: 5px 6.25px;
+        font-size: 12px;        
+    }
+    #tech .wrap ul li .abso .photo{
+        height: 412px;
+        overflow-y: scroll;
+    }
+    #tech .wrap ul li .abso .illu{
+        padding: 50px 20px;
+    }
+    #tech .wrap ul li .abso .illu img{
+        width: 320px;
+        height: 308px;
+    }        
+    #tech .wrap ul li .abso div .html{
+        line-height: 67.5px;
+    }
+    #tech .wrap ul li .abso div .html:first-child{
+        margin-top: 5px;
+    }
+    #tech .wrap ul li .abso div .css{
+        line-height: 67.5px;
+    }
+    #tech .wrap ul li .abso div .css:first-child{
+        margin-top: 5px;
+    }
+    #tech .wrap ul li .abso div .js{
+        line-height: 67.5px;
+    }
+    #tech .wrap ul li .abso div .js:first-child{
+        margin-top: 5px;
+    }
+    #tech .wrap ul li .abso div .jq{
+        line-height: 67.5px;
+    }
+    #tech .wrap ul li .abso div .jq:first-child{
+        margin-top: 5px;
+    }
+    #tech .wrap .btn{        
+        width: calc(100% - 40px);        
+    }            
+    #tech .wrap .btn .bul{        
+        bottom: -35px;
+    }                    
+}
+
+/* PC용 */
+@media (min-width:801px) {
+    .mob{
+        display: none !important;
+    }
+}
